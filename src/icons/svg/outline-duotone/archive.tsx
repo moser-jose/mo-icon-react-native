@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const OutlineDuotoneArchive: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none"><path stroke="${color}" stroke-width="1.5" d="M9 12c0-.466 0-.699.076-.883a1 1 0 0 1 .541-.54c.184-.077.417-.077.883-.077h3c.466 0 .699 0 .883.076a1 1 0 0 1 .54.541c.077.184.077.417.077.883s0 .699-.076.883a1 1 0 0 1-.541.54c-.184.077-.417.077-.883.077h-3c-.466 0-.699 0-.883-.076a1 1 0 0 1-.54-.541C9 12.699 9 12.466 9 12Z"/><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M20.5 7v6c0 3.771 0 5.657-1.172 6.828S16.271 21 12.5 21h-1c-3.771 0-5.657 0-6.828-1.172S3.5 16.771 3.5 13V7" opacity=".5"/><path stroke="${color}" stroke-width="1.5" d="M2 5c0-.943 0-1.414.293-1.707S3.057 3 4 3h16c.943 0 1.414 0 1.707.293S22 4.057 22 5s0 1.414-.293 1.707S20.943 7 20 7H4c-.943 0-1.414 0-1.707-.293S2 5.943 2 5Z"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(OutlineDuotoneArchive);

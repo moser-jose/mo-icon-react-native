@@ -14,8 +14,8 @@ import { optimize } from "svgo";
 const ROOT_DIR = path.resolve(__dirname, "..");
 const SVG_DIR = path.resolve(ROOT_DIR, "src", "icons", "img");
 const OUT_DIR = path.resolve(ROOT_DIR, "src", "icons", "svg");
-const REGISTRY_FILE = path.resolve(ROOT_DIR, "src", "icons", "registry.ts");
-const TYPES_FILE = path.resolve(ROOT_DIR, "src", "icons", "types.ts");
+const REGISTRY_FILE = path.resolve(ROOT_DIR, "src", "registry.ts");
+const TYPES_FILE = path.resolve(ROOT_DIR, "src", "types.ts");
 
 function ensureDir(dirPath: string): void {
   if (!fs.existsSync(dirPath)) {
@@ -150,7 +150,7 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const ${componentName}: React.FC<IconProps> = ({ size = 24, color = '#000', ...props }) => {
+const ${componentName}: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
   const xml = \`${xmlTemplate}\`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
@@ -294,7 +294,7 @@ function main(): void {
   );
   writeTypes(namesByVariant);
   writeRegistry(registryEntries, variants);
-  const namesFile = path.resolve(ROOT_DIR, "src", "icons", "icon-names.json");
+  const namesFile = path.resolve(ROOT_DIR, "src", "icon-names.json");
   ensureDir(path.dirname(namesFile));
   fs.writeFileSync(namesFile, JSON.stringify(namesByVariant, null, 2), "utf8");
 
