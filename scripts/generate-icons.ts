@@ -46,6 +46,47 @@ function listSvgFiles(dir: string): string[] {
   return results;
 }
 
+function normalizeFilenames(rootDirectory: string): void {
+  function walk(currentDirectory: string): void {
+    const entries = fs.readdirSync(currentDirectory, { withFileTypes: true });
+    for (const entry of entries) {
+      const currentFullPath = path.join(currentDirectory, entry.name);
+
+      if (entry.isDirectory()) {
+        walk(currentFullPath);
+        continue;
+      }
+
+      if (entry.isFile()) {
+        const { name: baseName, ext } = path.parse(entry.name);
+        const normalizedBase = baseName.toLowerCase().replace(/ /g, "-");
+        const normalizedExt = ext.toLowerCase();
+        const newFileName = `${normalizedBase}${normalizedExt}`;
+        const newFullPath = path.join(currentDirectory, newFileName);
+
+        if (currentFullPath !== newFullPath) {
+          try {
+            fs.renameSync(currentFullPath, newFullPath);
+            console.log(`✔ Renamed: ${currentFullPath} → ${newFullPath}`);
+          } catch (error) {
+            console.error(
+              `✖ Failed to rename ${currentFullPath} → ${newFullPath}`,
+              error
+            );
+          }
+        }
+      }
+    }
+  }
+
+  if (!fs.existsSync(rootDirectory)) {
+    console.error("Directory not found:", rootDirectory);
+    process.exit(1);
+  }
+
+  walk(rootDirectory);
+}
+
 /** Convert absolute file path to name key relative to the variant dir, without extension */
 function toNameKey(fileFullPath: string): string {
   const base = path.basename(fileFullPath);
@@ -194,6 +235,14 @@ function writeTypes(namesByVariant: Record<string, string[]>): void {
 }
 
 function main(): void {
+  const providedPath = "./src/icons/img";
+  const defaultPath = path.resolve(__dirname, "..", "src", "icons", "img");
+  const targetPath = providedPath
+    ? path.resolve(process.cwd(), providedPath)
+    : defaultPath;
+
+  normalizeFilenames(targetPath);
+
   if (!fs.existsSync(SVG_DIR)) {
     console.error("SVG source directory not found:", SVG_DIR);
     process.exit(1);
