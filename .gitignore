@@ -1,0 +1,49 @@
+# Node / TypeScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build outputs
+dist/
+build/
+lib/
+android/
+ios/
+expo/
+
+# OS / IDE
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Tests / Coverage
+coverage/
+
+# React Native specific
+*.iml
+*.hprof
+*.log
+/buck-out/
+/.buckconfig.local
+/.buckd/
+/.gradle/
+**/android/app/build/
+**/ios/Pods/
+
+# Generated icon files (can be re-created)
+src/icons/svg/
+src/icons/registry.ts
+src/icons/types.ts
+src/icons/icon-names.json
+
+
