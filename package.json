@@ -1,12 +1,24 @@
 {
   "name": "@mosmmy/mo-icon-react-native",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "react-native": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "react-native": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
+    "build": "tsc -p tsconfig.json",
     "generate:icons": "ts-node scripts/generate-icons.ts",
+    "convert:svgs": "ts-node scripts/convert-svgs-to-tsx.ts --src ./src/icons/img/outline --out ./src/icons/svg/outline --width 22 --height 22",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci --coverage"
+    "test:ci": "jest --ci --coverage",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
