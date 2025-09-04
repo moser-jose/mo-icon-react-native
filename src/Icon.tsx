@@ -1,6 +1,6 @@
 import React from "react";
-import { iconRegistry } from "../registry";
-import type { IconComponentProps } from "../types";
+import { iconRegistry } from "./registry";
+import type { IconComponentProps } from "./types/Icon";
 
 export type IconType = keyof typeof iconRegistry;
 

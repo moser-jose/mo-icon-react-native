@@ -1,18 +1,18 @@
 ## @mosmmy/mo-icon-react-native
 
-Biblioteca de ícones para React Native baseada em SVG, com suporte a múltiplas variantes (bold, bold-duotone, broken, outline, outline-duotone). Os ícones são gerados a partir de arquivos `.svg` e renderizados via `react-native-svg`.
+Icon library for React Native based on SVG, with support for multiple variants (bold, bold-duotone, broken, outline, outline-duotone). Icons are generated from `.svg` files and rendered via `react-native-svg`.
 
-### Instalação
+## Installation
 
 ```bash
 npm install @mosmmy/mo-icon-react-native react-native-svg
-# ou
+# or
 yarn add @mosmmy/mo-icon-react-native react-native-svg
 ```
 
-> Observação: `react` (>=17), `react-native` (>=0.71.0) e `react-native-svg` (>=13) são peerDependencies.
+> Note: `react` (>=17), `react-native` (>=0.71.0) and `react-native-svg` (>=13) are peerDependencies.
 
-### Uso básico
+## Basic usage
 
 ```tsx
 import React from "react";
@@ -29,67 +29,66 @@ export default function Example() {
 }
 ```
 
-#### Variantes disponíveis
+### Available variants
 
-- bold
-- bold-duotone
-- broken
-- outline
-- outline-duotone
+- bold --> (e.g., <img src="src/icons/img/bold/notifications/bell.svg" alt="bell bold icon" width="18">)
+- bold-duotone --> (e.g., <img src="src/icons/img/bold-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
+- broken --> (e.g., <img src="src/icons/img/broken/notifications/bell.svg" alt="bell bold icon" width="18">)
+- outline --> (e.g., <img src="src/icons/img/outline/notifications/bell.svg" alt="bell bold icon" width="18">)
+- outline-duotone --> (e.g., <img src="src/icons/img/outline-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
 
-#### Props do componente `Icon`
+### `Icon` props
 
-- `name` (string): nome do ícone (veja a lista gerada em `src/icons/icon-names.json`).
-- `type` (opcional): variante do ícone; padrão: `"outline"`.
-- `size` (opcional): tamanho em px; padrão: `24`.
-- `color` (opcional): cor (stroke/fill) em HEX; padrão: `#000`.
-- Demais props são repassados ao `SvgXml` (de `react-native-svg`).
+- `name` (string): icon name (see the generated list in `src/icon-names.json`).
+- `type` (optional): icon variant; default: `"outline"`.
+- `size` (optional): size in px; default: `24`.
+- `color` (optional): color (stroke/fill) in HEX; default: `#1C274C`.
 
-Para maior tipagem das variantes, você pode usar o tipo `IconType` exportado:
+## Project structure
 
-```ts
-import type { IconType } from "@mosmmy/mo-icon-react-native";
+- `src/icons/img/<variant>/...`: input SVGs (organize as you prefer; e.g., `notifications/bell.svg`).
+- `src/icons/svg/<variant>/...`: generated TSX components from the SVGs.
+- `src/registry.ts`: generated registry mapping `{ [variant]: { [name]: Component } }`.
+- `src/types/Icon.d.ts`: types generated from the discovered names.
+- `src/icon-names.json`: JSON with names grouped by variant.
+- `src/Icon.tsx`: `Icon` component that resolves and renders the corresponding component.
 
-const variant: IconType = "outline";
-```
+## Generating icons from SVGs
 
-### Estrutura do projeto
+1. Add/update your `.svg` files in `src/icons/img/<variant>/<folder>/...`.
 
-- `src/icons/img/<variant>/...`: SVGs de entrada (organize como preferir; ex.: `notifications/bell.svg`).
-- `src/icons/svg/<variant>/...`: componentes TSX gerados a partir dos SVGs.
-- `src/icons/registry.ts`: registro gerado que mapeia `{ [variant]: { [name]: Component } }`.
-- `src/icons/types.ts`: tipos gerados a partir dos nomes encontrados.
-- `src/icons/icon-names.json`: JSON com os nomes agrupados por variante.
-- `src/icons/react-native-icon.tsx`: componente `Icon` que resolve e renderiza o componente correspondente.
 
-### Gerando ícones a partir dos SVGs
-
-1. Adicione/atualize seus arquivos `.svg` em `src/icons/img/<variant>/...`.
-
-2. Execute os testes para aferir se esta tudo OK:
-
-```bash
-npm run test3
-```
-
-3. Execute o script de geração:
+2. Run the generation script:
 
 ```bash
 npm run generate:icons
 ```
 
-O script:
+3. Run the tests to ensure everything is OK:
 
-- Otimiza os SVGs via SVGO;
-- Gera componentes TSX que usam `SvgXml` e aceitam `size` e `color`;
-- Atualiza `registry.ts`, `types.ts` e `icon-names.json` com base no que foi encontrado em `img/`.
+```bash
+npm run test
 
-### Boas práticas e observações
+npm run test:ci #coverage
+```
 
-- Use nomes de arquivos em kebab-case (ex.: `bell-bing.svg`). Esses nomes serão utilizados como `name` no `Icon`.
-- Caso adicione novas variantes, inclua os SVGs em `src/icons/img/<sua-variant>/...` e rode o gerador.
-- Se você consumir a lib diretamente do repositório (sem build), garanta que os arquivos gerados estão atualizados.
+The script:
 
-### Licença
+- Optimizes SVGs via SVGO;
+- Generates TSX components that use `SvgXml` and accept `size` and `color`;
+- Updates `registry.ts`, `types.ts` and `icon-names.json` based on what was found in `img/`.
 
-ISC
+## Best practices and notes
+
+- Use kebab-case file names (e.g., `bell-bing.svg`). These names will be used as `name` in the `Icon`.
+- If you add new variants, include the SVGs in `src/icons/img/<your-variant>/...` and run the generator.
+- If you consume the lib directly from the repository (without build), ensure the generated files are up to date.
+
+## License
+
+This project is governed by the [MIT](/LICENSE.md). Just remember to be a nice person and send back any modifications, corrections or improvements. ✌️
+
+## Author
+
+| [<img src="https://avatars0.githubusercontent.com/u/8234620?" width="115"><br><sub>@moser-jose</sub>](https://github.com/moser-jose) |
+| :----------------------------------------------------------------------------------------------------------------------------------: |

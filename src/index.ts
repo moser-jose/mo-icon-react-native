@@ -1,3 +1,3 @@
-export { Icon } from "./components/react-native-icon";
+export { Icon } from "./Icon";
 export { iconRegistry } from "./registry";
 export type { IconType } from "./registry";
