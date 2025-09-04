@@ -180,7 +180,7 @@ function writeRegistry(
   );
   lines.push("");
   lines.push(
-    "export const iconRegistry: Record<IconType, Record<string, any>> = {"
+    "export const iconRegistry: Record<IconType, Record<string, unknown>> = {"
   );
 
   const byVariant = registryEntries.reduce<Record<string, RegistryEntry[]>>(

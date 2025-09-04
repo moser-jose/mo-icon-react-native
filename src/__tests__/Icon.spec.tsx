@@ -1,17 +1,13 @@
 import React from "react";
+import { Icon } from "../components/react-native-icon";
 
-const { Icon } = require("../components/react-native-icon");
 jest.mock("../registry", () => {
-  const React = require("react");
-  const MockSvg = (props: any) => React.createElement("svg", props);
-
-  // Importa o módulo real e reaproveita o export original
   const actual = jest.requireActual<typeof import("../registry")>("../registry");
 
   return {
     ...actual,
     iconRegistry: {
-      ...actual.iconRegistry
+      ...actual.iconRegistry,
     },
   };
 });
@@ -22,7 +18,6 @@ jest.mock("react-native-svg", () => ({
     return React.createElement("svg", props);
   },
 }));
-
 
 describe("Icon", () => {
   it("should be able to render an existing icon", () => {
@@ -37,7 +32,8 @@ describe("Icon", () => {
 
   it("should be able to render an existing icon without type", () => {
     const element = Icon({
-      name: "archive",
+      name: "bell",
+      type: "outline-duotone",
       size: 24,
       color: "#111",
     });
@@ -52,17 +48,16 @@ describe("Icon", () => {
     expect(element).toBeTruthy();
   });
 
-  it("returns null for icon without name", () => {
+  it("returns null for icon without name property", () => {
     const warn = jest.spyOn(console, "warn").mockImplementation(() => {});
     const element = Icon({
+      name: '',
       size: 24,
     });
     expect(element).toBeNull();
     expect(warn).toHaveBeenCalled();
     warn.mockRestore();
   });
-
-
 
   it("returns null for unknown icon and logs a warning", () => {
     const warn = jest.spyOn(console, "warn").mockImplementation(() => {});

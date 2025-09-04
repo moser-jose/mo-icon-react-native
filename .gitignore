@@ -41,7 +41,7 @@ coverage/
 **/ios/Pods/
 
 # Generated icon files (can be re-created)
-src/svg/
+src/icons/svg/
 src/registry.ts
 src/types.ts
 src/icon-names.json

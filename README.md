@@ -66,7 +66,13 @@ const variant: IconType = "outline";
 
 1. Adicione/atualize seus arquivos `.svg` em `src/icons/img/<variant>/...`.
 
-2. Execute o script de geração:
+2. Execute os testes para aferir se esta tudo OK:
+
+```bash
+npm run test3
+```
+
+3. Execute o script de geração:
 
 ```bash
 npm run generate:icons
