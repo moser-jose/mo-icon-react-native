@@ -7,7 +7,7 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
 };
 
 const OutlineDuotoneDocumentText: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
-  const xml = `<svg fill="none"><path stroke="${color}" stroke-width="1.5" d="M3 10c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h2c3.771 0 5.657 0 6.828 1.172S21 6.229 21 10v4c0 3.771 0 5.657-1.172 6.828S16.771 22 13 22h-2c-3.771 0-5.657 0-6.828-1.172S3 17.771 3 14z" opacity=".5"/><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M8 12h8M8 8h8m-8 8h5"/></svg>`;
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path stroke="${color}" stroke-width="1.5" d="M3 10c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h2c3.771 0 5.657 0 6.828 1.172S21 6.229 21 10v4c0 3.771 0 5.657-1.172 6.828S16.771 22 13 22h-2c-3.771 0-5.657 0-6.828-1.172S3 17.771 3 14z" opacity=".5"/><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M8 12h8M8 8h8m-8 8h5"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 

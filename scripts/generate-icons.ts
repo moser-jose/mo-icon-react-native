@@ -128,6 +128,22 @@ function prepareXml(svgXml: string, variant: string): string {
     .replace(/\swidth="[^"]+"/gi, "")
     .replace(/\sheight="[^"]+"/gi, "");
 
+  // ensure viewBox="0 0 24 24"
+  const svgOpenTagPattern = /<svg\b([\s\S]*?)>/i;
+  const viewBoxPattern = /\bviewBox\s*=\s*['"][^'\"]+['"]/i;
+
+  if (svgOpenTagPattern.test(xml)) {
+    if (viewBoxPattern.test(xml)) {
+      // Replace any existing viewBox with the standard one
+      xml = xml.replace(viewBoxPattern, 'viewBox="0 0 24 24"');
+    } else {
+      // Inject viewBox if missing
+      xml = xml.replace(svgOpenTagPattern, (match, attrs) => {
+        return `<svg${attrs} viewBox="0 0 24 24">`;
+      });
+    }
+  }
+
   // stroke
   xml = xml.replace(/stroke="(?!none)[^"]+"/gi, 'stroke="${color}"');
   // fill
@@ -175,11 +191,17 @@ function writeRegistry(
   lines.push("/* Author: @moser-jose */");
   lines.push("/* Date: " + new Date().toISOString().split("T")[0] + " */");
   lines.push("/*");
-  lines.push("  - Builds src/icons/registry.ts mapping: { [variant]: { [nameKey]: Component } }");
-  lines.push("  - Name key is the file path relative to the variant dir without extension (e.g. \"bell-bing\")");
+  lines.push(
+    "  - Builds src/icons/registry.ts mapping: { [variant]: { [nameKey]: Component } }"
+  );
+  lines.push(
+    '  - Name key is the file path relative to the variant dir without extension (e.g. "bell-bing")'
+  );
   lines.push("*/");
   lines.push("");
-  lines.push("import type { IconComponentProps as IconProps } from './types/Icon';");
+  lines.push(
+    "import type { IconComponentProps as IconProps } from './types/Icon';"
+  );
   lines.push("");
   lines.push("");
   lines.push(
@@ -222,8 +244,12 @@ function writeTypes(namesByVariant: Record<string, string[]>): void {
   lines.push("/* Author: @moser-jose */");
   lines.push("/* Date: " + new Date().toISOString().split("T")[0] + " */");
   lines.push("/*");
-  lines.push("  - Builds src/types/Icon.d.ts mapping: { [variant]: [nameKey1, nameKey2, ...] }");
-  lines.push("  - Name key is the file path relative to the variant dir without extension (e.g. \"bell-bing\")");
+  lines.push(
+    "  - Builds src/types/Icon.d.ts mapping: { [variant]: [nameKey1, nameKey2, ...] }"
+  );
+  lines.push(
+    '  - Name key is the file path relative to the variant dir without extension (e.g. "bell-bing")'
+  );
   lines.push("*/");
   lines.push("");
   lines.push("export interface IconNamesByVariant {");
