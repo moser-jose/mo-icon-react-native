@@ -28,9 +28,6 @@
       "types": "./src/types/Icon.d.ts"
     }
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "generate:icons": "ts-node scripts/generate-icons.ts",
