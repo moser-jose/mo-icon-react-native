@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+src/icons/img/
+src/icons/svg/
+src/registry.ts
+*.d.ts
+*.svg
+
+
