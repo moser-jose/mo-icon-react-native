@@ -1,6 +1,8 @@
-import React from "react";
-import { iconRegistry } from "./registry";
-import type { IconComponentProps } from "./types/Icon";
+import React from 'react';
+
+import { iconRegistry } from './registry';
+
+import type { IconComponentProps } from './types/Icon';
 
 export type IconType = keyof typeof iconRegistry;
 
@@ -13,15 +15,12 @@ export type IconProps = {
 
 export const Icon: React.FC<IconProps> = ({
   name,
-  type = "outline",
+  type = 'outline',
   size = 24,
-  color = "#1C274C",
+  color = '#1C274C',
   ...props
 }) => {
-  const byType = iconRegistry[type] as Record<
-    string,
-    React.ComponentType<IconComponentProps>
-  >;
+  const byType = iconRegistry[type] as Record<string, React.ComponentType<IconComponentProps>>;
   if (!byType) {
     console.warn(`[Icon] Unknown type: ${type}`);
     return null;
