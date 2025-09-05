@@ -43,7 +43,7 @@ describe("Icon", () => {
 
   it("should be able to render an existing icon without type and color", () => {
     const element = Icon({
-      name: "archive",
+      name: "download",
       size: 24,
     });
     expect(element).toBeTruthy();

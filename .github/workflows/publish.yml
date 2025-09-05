@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '>=18.0.0'
-          cache: 'npm'
-      
+          node-version: ">=18.0.0"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
 
@@ -27,7 +27,7 @@ jobs:
 
       - name: Generate icons
         run: npm run generate:icons
-        
+
       - name: Check package version
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
@@ -36,21 +36,21 @@ jobs:
             echo "::error::Package version ($PACKAGE_VERSION) does not match tag version ($TAG_VERSION)"
             exit 1
           fi
-        
+
   build-and-publish-npm:
     needs: verify
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+
+      - name: Use Node.js (npmjs.org)
+        uses: actions/setup-node@v4
         with:
-          node-version: '>=18.0.0'
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'npm'
-      
+          node-version: ">=18.0.0"
+          registry-url: "https://registry.npmjs.org"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
 
@@ -59,38 +59,46 @@ jobs:
 
       - name: Test
         run: npm run test
-      
+
       - name: Build
         run: npm run build
-      
-      - name: Publish to NPM
+
+      - name: Publish to npm registry
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
-      - name: publish to github packages
+
+      - name: Configure GitHub Packages registry
+        uses: actions/setup-node@v4
+        with:
+          node-version: ">=18.0.0"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@mosmmy"
+          cache: "npm"
+
+      - name: Publish to GitHub Packages
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
   notify:
     needs: [build-and-publish-npm]
     runs-on: ubuntu-latest
     if: success()
-    
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Get package info
         id: package
         run: |
           echo "name=$(node -p "require('./package.json').name")" >> $GITHUB_OUTPUT
           echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
-      
+
       - name: Create GitHub Release Summary
         run: |
           echo "## :rocket: Nova versão publicada com sucesso!" >> $GITHUB_STEP_SUMMARY
           echo "* **Pacote:** ${{ steps.package.outputs.name }}" >> $GITHUB_STEP_SUMMARY
           echo "* **Versão:** ${{ steps.package.outputs.version }}" >> $GITHUB_STEP_SUMMARY
           echo "* **Publicado em:** npm e GitHub Packages" >> $GITHUB_STEP_SUMMARY
-          echo "* **Data:** $(date)" >> $GITHUB_STEP_SUMMARY 
+          echo "* **Data:** $(date)" >> $GITHUB_STEP_SUMMARY
