@@ -1,29 +1,43 @@
 {
   "name": "@mosmmy/mo-icon-react-native",
-  "version": "1.0.0",
-  "main": "dist/index.js",
-  "react-native": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "1.0.3",
+  "main": "src/index.js",
+  "react-native": "src/index.js",
+  "types": "src/types/Icon.d.ts",
+  "author": "Moser José",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moser-jose/mo-icon-react-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moser-jose/mo-icon-react-native/issues"
+  },
+  "homepage": "https://github.com/moser-jose/mo-icon-react-native",
+  "license": "MIT",
+  "description": "Icon library for React Native based on SVG, with support for multiple variants (bold, bold-duotone, broken, outline, outline-duotone). Icons are generated from `.svg` files and rendered via `react-native-svg`.",
+  "keywords": [
+    "react-native",
+    "svg",
+    "icons",
+    "mo"
+  ],
   "exports": {
     ".": {
-      "react-native": "./dist/index.js",
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "react-native": "src/index.js",
+      "default": "src/index.js",
+      "types": "src/types/Icon.d.ts"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "generate:icons": "ts-node scripts/generate-icons.ts",
-    "convert:svgs": "ts-node scripts/convert-svgs-to-tsx.ts --src ./src/icons/img/outline --out ./src/icons/svg/outline --width 22 --height 22",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci --coverage",
-    "prepublishOnly": "npm run build"
+    "test:ci": "jest --ci --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "peerDependencies": {
     "react": ">=17",
     "react-native": ">=0.71.0",

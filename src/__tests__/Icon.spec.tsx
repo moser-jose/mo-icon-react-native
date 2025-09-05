@@ -1,8 +1,9 @@
 import React from "react";
-import { Icon } from "../components/react-native-icon";
+import { Icon } from "..";
 
 jest.mock("../registry", () => {
-  const actual = jest.requireActual<typeof import("../registry")>("../registry");
+  const actual =
+    jest.requireActual<typeof import("../registry")>("../registry");
 
   return {
     ...actual,
@@ -51,7 +52,7 @@ describe("Icon", () => {
   it("returns null for icon without name property", () => {
     const warn = jest.spyOn(console, "warn").mockImplementation(() => {});
     const element = Icon({
-      name: '',
+      name: "",
       size: 24,
     });
     expect(element).toBeNull();
