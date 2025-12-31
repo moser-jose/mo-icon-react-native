@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldBackpack: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" fill-rule="evenodd" d="M7.292 4.786v-.061c0-.339.011-.782.165-1.222A3.75 3.75 0 0 1 11 1h2a3.75 3.75 0 0 1 3.544 2.503c.153.44.165.883.165 1.222v.06a5.97 5.97 0 0 1 4.29 5.631l.001.18v2.323a.8.8 0 0 0-.304.064 21.54 21.54 0 0 1-17.391 0A.75.75 0 0 0 3 12.92v-2.503a5.97 5.97 0 0 1 4.291-5.63m1.582-.794A2.25 2.25 0 0 1 11 2.49h2c.983 0 1.82.626 2.126 1.502.046.13.068.28.077.47-2.12-.36-4.286-.36-6.406 0 .009-.19.031-.34.077-.47m.376 8.679c0-.412.336-.745.75-.745h4c.414 0 .75.333.75.745a.747.747 0 0 1-.75.745h-4a.747.747 0 0 1-.75-.745" clip-rule="evenodd"/><path fill="${color}" d="M21 14.477q-1.352.573-2.75.966v1.201a.747.747 0 0 1-.75.745.747.747 0 0 1-.75-.745v-.832A23.06 23.06 0 0 1 3 14.477v1.546a4.495 4.495 0 0 0 3.539 4.381c3.597.794 7.325.794 10.923 0A4.495 4.495 0 0 0 21 16.025z"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldBackpack);

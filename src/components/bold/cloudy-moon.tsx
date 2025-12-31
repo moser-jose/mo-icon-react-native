@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldCloudyMoon: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M11.286 22C13.337 22 15 20.42 15 18.47c0-1.544-1.045-2.857-2.5-3.336C12.295 13.371 10.72 12 8.81 12c-2.052 0-3.715 1.58-3.715 3.53 0 .43.082.844.23 1.226a3 3 0 0 0-.54-.05C3.248 16.706 2 17.89 2 19.353S3.247 22 4.786 22z"/><path fill="${color}" d="M2.716 15.723q.418-.224.882-.354C3.686 12.6 6.056 10.5 8.81 10.5q.259 0 .511.024A6.5 6.5 0 0 1 9 8.5a6.5 6.5 0 0 1 3.143-5.567C12.54 2.693 12.463 2 12 2 6.477 2 2 6.477 2 12a10 10 0 0 0 .716 3.723M22 12c0 4.266-2.671 7.908-6.432 9.345a4.87 4.87 0 0 0 .932-2.874 4.9 4.9 0 0 0-1.457-3.487q.227.015.457.016a6.5 6.5 0 0 0 5.567-3.143c.24-.396.933-.32.933.143"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldCloudyMoon);

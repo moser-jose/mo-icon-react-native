@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const OutlineLadle: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" fill-rule="evenodd" d="M5.434 2.5A2.934 2.934 0 0 0 2.5 5.434a.75.75 0 0 1-1.5 0 4.434 4.434 0 1 1 8.868 0v6.912a7.3 7.3 0 0 1 1.23-.569c1.333-.485 3.046-.777 4.652-.777 1.608 0 3.205.293 4.427.787.608.246 1.16.557 1.574.939.411.38.749.894.749 1.524v1.184a7.066 7.066 0 0 1-14.132 0v-10A2.934 2.934 0 0 0 5.434 2.5m15.49 13.86a5.567 5.567 0 0 1-11.006-.177c.355.206.757.386 1.18.54 1.333.485 3.046.777 4.652.777 1.608 0 3.205-.293 4.427-.787q.393-.159.747-.354M21 14.25c0-.06-.03-.204-.267-.422-.234-.217-.61-.444-1.12-.65-1.014-.411-2.417-.678-3.863-.678-1.448 0-2.985.267-4.139.687-.58.211-1.022.446-1.304.674-.296.238-.307.375-.307.389s.011.151.307.39c.282.227.724.462 1.304.673 1.154.42 2.691.687 4.139.687 1.446 0 2.849-.267 3.864-.678.51-.206.885-.433 1.12-.65S21 14.31 21 14.25" clip-rule="evenodd"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(OutlineLadle);

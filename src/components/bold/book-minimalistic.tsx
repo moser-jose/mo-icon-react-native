@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldBookMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M5.655 2.227c-.433.113-.711.273-.928.485-.305.3-.504.72-.613 1.513C4.002 5.042 4 6.124 4 7.675v8.57a4.2 4.2 0 0 1 1.299-.593 3 3 0 0 1 .356-.072zM7.31 15.514H20V7.676c0-1.552-.002-2.634-.114-3.451-.109-.793-.308-1.213-.613-1.513-.306-.299-.734-.494-1.544-.6-.834-.11-1.938-.112-3.522-.112H9.793c-1.002 0-1.812 0-2.483.029zm.163 1.621c-1.079 0-1.456.007-1.746.083a2.46 2.46 0 0 0-1.697 1.538q.023.571.084 1.019c.109.793.308 1.213.613 1.513.306.299.734.494 1.544.6.834.11 1.938.112 3.522.112h4.414c1.584 0 2.688-.002 3.522-.111.81-.107 1.238-.302 1.544-.601.305-.3.504-.72.613-1.513.092-.666.11-1.51.113-2.64z"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldBookMinimalistic);

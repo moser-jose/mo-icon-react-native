@@ -4,12 +4,23 @@ import React from 'react';
 import { Icon } from '..';
 
 jest.mock('../registry', () => {
-  const actual = jest.requireActual<typeof import('../registry')>('../registry');
+  // Mock icon components
+  const MockIconComponent = () => null;
 
   return {
-    ...actual,
     iconRegistry: {
-      ...actual.iconRegistry,
+      outline: {
+        archive: MockIconComponent,
+        bell: MockIconComponent,
+        download: MockIconComponent,
+        'does-not-exist': undefined,
+      },
+      'bold-duotone': {
+        archive: MockIconComponent,
+      },
+      'outline-duotone': {
+        bell: MockIconComponent,
+      },
     },
   };
 });

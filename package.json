@@ -1,9 +1,9 @@
 {
   "name": "@mosmmy/mo-icon-react-native",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "./src/index.js",
   "react-native": "./src/index.js",
-  "types": "./src/types/Icon.d.ts",
+  "types": "./src/index.d.ts",
   "author": "Moser José",
   "repository": {
     "type": "git",
@@ -21,11 +21,16 @@
     "icons",
     "mo"
   ],
+  "files": [
+    "src/**/*",
+    "README.md",
+    "LICENSE.md"
+  ],
   "exports": {
     ".": {
       "react-native": "./src/index.js",
       "default": "./src/index.js",
-      "types": "./src/types/Icon.d.ts"
+      "types": "./src/index.d.ts"
     }
   },
   "scripts": {

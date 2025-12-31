@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldDuotoneVolleyball: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M10.577 12.399A10.8 10.8 0 0 1 7.2 15.238a16.42 16.42 0 0 1-.32-11.83 9.9 9.9 0 0 1 3.484-1.275l-.18.426a10.92 10.92 0 0 0 .563 9.623zM4.859 5A9.97 9.97 0 0 0 2 12c0 1.617.384 3.145 1.066 4.497.954-.093 1.883-.31 2.767-.64a17.9 17.9 0 0 1-.969-10.863z"/><path fill="${color}" d="M12.017 12.992c1.923.046 3.769.6 5.363 1.57-2.889 3.035-6.988 5.14-11.165 5.595a10 10 0 0 1-2.29-2.259c3.077-.48 5.887-2.1 7.831-4.573zm8.423 4.372A9.99 9.99 0 0 1 12 22a10 10 0 0 1-3.635-.681c3.903-.872 7.577-3.006 10.25-5.88a10.7 10.7 0 0 1 1.825 1.926" opacity=".7"/><path fill="${color}" d="m21.624 11.358.002.002.37.373Q22 11.866 22 12c0 1.388-.282 2.71-.793 3.91a12.27 12.27 0 0 0-9.126-4.415 9.43 9.43 0 0 1-1.253-4.684 15.8 15.8 0 0 1 10.796 4.547M10.946 5.313a9.4 9.4 0 0 1 .622-2.172L12.048 2c4.583.021 8.439 3.127 9.597 7.348a17.3 17.3 0 0 0-10.699-4.035" opacity=".4"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldDuotoneVolleyball);

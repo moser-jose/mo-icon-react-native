@@ -43,11 +43,11 @@ export default function Example() {
 
 ### Available variants
 
-- bold --> (e.g., <img src="src/icons/img/bold/notifications/bell.svg" alt="bell bold icon" width="18">)
-- bold-duotone --> (e.g., <img src="src/icons/img/bold-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
-- broken --> (e.g., <img src="src/icons/img/broken/notifications/bell.svg" alt="bell bold icon" width="18">)
-- outline --> (e.g., <img src="src/icons/img/outline/notifications/bell.svg" alt="bell bold icon" width="18">)
-- outline-duotone --> (e.g., <img src="src/icons/img/outline-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
+- bold --> (e.g., <img src="src/icons/bold/notifications/bell.svg" alt="bell bold icon" width="18">)
+- bold-duotone --> (e.g., <img src="src/icons/bold-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
+- broken --> (e.g., <img src="src/icons/broken/notifications/bell.svg" alt="bell bold icon" width="18">)
+- outline --> (e.g., <img src="src/icons/outline/notifications/bell.svg" alt="bell bold icon" width="18">)
+- outline-duotone --> (e.g., <img src="src/icons/outline-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
 
 ### `Icon` props
 
@@ -58,8 +58,8 @@ export default function Example() {
 
 ## Project structure
 
-- `src/icons/img/<variant>/...`: input SVGs (organize as you prefer; e.g., bell.svg`).
-- `src/icons/svg/<variant>/...`: generated TSX components from the SVGs.
+- `src/icons/<variant>/...`: input SVGs (organize as you prefer; e.g., bell.svg`).
+- `src/icons/components/<variant>/...`: generated TSX components from the SVGs.
 - `src/registry.ts`: generated registry mapping `{ [variant]: { [name]: Component } }`.
 - `src/types/Icon.d.ts`: types generated from the discovered names.
 - `src/icon-names.json`: JSON with names grouped by variant.
@@ -67,12 +67,10 @@ export default function Example() {
 
 ## Generating icons from SVGs
 
-1. Add/update your `.svg` files in `src/icons/img/<variant>/<folder>/...`.
+1. Add/update your `.svg` files in `src/icons/<variant>/<folder>/...`.
 
 > Note: Before adding new SVGs, make sure to check whether the name already exists in the list provided in [icon-names.json](/src/icon-names.json). If the name already exists, you **must rename** the SVG before including it.
 > You need to add the SVGs according to the variant, e.g., **bold**, **bold-duotone**, **outline**, **outline-duotone**, and **broken**.
-
-
 
 2. Run the generation script:
 
@@ -92,16 +90,20 @@ The script:
 
 - Optimizes SVGs via SVGO;
 - Generates TSX components that use `SvgXml` and accept `size` and `color`;
-- Updates `registry.ts`, `types.d.ts` and `icon-names.json` based on what was found in `img/`.
+- Updates `registry.ts`, `types.d.ts` and `icon-names.json` based on what was found in `icons/`.
 
 ## Best practices and notes
 
 - Use kebab-case file names (e.g., `bell-bing.svg`). These names will be used as `name` in the `Icon`.
-- If you add new variants, include the SVGs in `src/icons/img/<your-variant>/...` and run the generator.
+- If you add new variants, include the SVGs in `src/icons/<your-variant>/...` and run the generator.
 
 ## License
 
 This project is governed by the [MIT](/LICENSE.md). Just remember to be a nice person and send back any modifications, corrections or improvements. ✌️
+
+## Icon credits
+
+Icons created by 480 Design. Instagram: [@480_design](https://www.instagram.com/480_design)
 
 ## Author
 

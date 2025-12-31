@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldDuotoneWatchRound: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M12 18.977c3.866 0 7-3.124 7-6.977s-3.134-6.977-7-6.977S5 8.147 5 12s3.134 6.977 7 6.977" opacity=".5"/><path fill="${color}" d="M11.209 2h1.582c1.539 0 2.308 0 2.856.44.549.44.716 1.19 1.05 2.692L17 6.5l.156.782A7 7 0 0 0 12 5.023c-2.04 0-3.877.87-5.156 2.259L7 6.5l.304-1.368c.334-1.501.5-2.252 1.049-2.692S9.671 2 11.209 2m5.947 14.719A7 7 0 0 1 12 18.977c-2.04 0-3.877-.87-5.156-2.258L7 17.5l.304 1.368c.334 1.501.5 2.252 1.049 2.692s1.317.44 2.856.44h1.582c1.539 0 2.308 0 2.856-.44s.715-1.19 1.05-2.692L17 17.5zM12.7 9.138a.7.7 0 0 0-.7-.698.7.7 0 0 0-.7.698V12c0 .19.077.372.215.503l1.866 1.79a.7.7 0 0 0 .99-.02.696.696 0 0 0-.02-.987L12.7 11.703z"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldDuotoneWatchRound);

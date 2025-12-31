@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldVideoFrame2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M11.25 2.031A1 1 0 0 0 11 2H7.75v4.25h3.5zm1.5 4.975V4h3.5v4.25h-3.5zm-1.5.744H2V14q-.001.677.004 1.25h9.246zm1.5 8.256V9.75H22V16q.001.677-.004 1.25H12.75zm-1.5.744h-3.5V20l.917.001h2.583zm1.5 5.219A1 1 0 0 0 13 22h3.25v-3.25h-3.5zM6.25 2.023c-1.61.055-2.588.239-3.274.856-.75.675-.924 1.666-.964 3.371H6.25zm11.5 6.227V4.023c1.61.055 2.588.239 3.274.856.75.675.924 1.666.964 3.371zm4.19 10.5h-4.19v3.227c1.61-.055 2.588-.239 3.274-.856.59-.53.823-1.256.915-2.37M6.25 16.75v3.227c-1.61-.055-2.588-.239-3.274-.856-.59-.53-.823-1.256-.915-2.37z"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldVideoFrame2);

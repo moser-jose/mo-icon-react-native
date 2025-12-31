@@ -4,7 +4,7 @@
   Date: 2025-09-04
 
   Icon generator for React Native (TypeScript)
-  - Scans src/icons/img/<variant>/**.svg
+  - Scans src/icons/<variant>/**.svg
   - Produces components at src/icons/svg/<variant>/<relativePath>.tsx using SvgXml from react-native-svg
   - Builds src/registry.ts mapping: { [variant]: { [nameKey]: Component } }
   - Name key is the file path relative to the variant dir without extension (e.g. "bell-bing")
@@ -16,8 +16,8 @@ import path from 'path';
 import { optimize } from 'svgo';
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const SVG_DIR = path.resolve(ROOT_DIR, 'src', 'icons', 'img');
-const OUT_DIR = path.resolve(ROOT_DIR, 'src', 'icons', 'svg');
+const SVG_DIR = path.resolve(ROOT_DIR, 'src', 'icons');
+const OUT_DIR = path.resolve(ROOT_DIR, 'src', 'components');
 const REGISTRY_FILE = path.resolve(ROOT_DIR, 'src', 'registry.ts');
 const TYPES_FILE = path.resolve(ROOT_DIR, 'src', 'types', 'Icon.d.ts');
 
@@ -266,8 +266,8 @@ function writeTypes(namesByVariant: Record<string, string[]>): void {
 }
 
 function main(): void {
-  const providedPath = './src/icons/img';
-  const defaultPath = path.resolve(__dirname, '..', 'src', 'icons', 'img');
+  const providedPath = './src/icons';
+  const defaultPath = path.resolve(__dirname, '..', 'src', 'icons');
   const targetPath = providedPath ? path.resolve(process.cwd(), providedPath) : defaultPath;
 
   normalizeFilenames(targetPath);

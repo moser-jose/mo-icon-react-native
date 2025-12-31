@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldSsdSquare: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M7.5 3h9c1.105 0 2 .53 2.5 2.118l2.25 7.764a3.4 3.4 0 0 0-1-.244c-.468-.05-1.04-.05-1.7-.05H5.45c-.66 0-1.232 0-1.7.05a3.4 3.4 0 0 0-1 .244L5 5.118C5.5 3.529 6.395 3 7.5 3"/><path fill="${color}" fill-rule="evenodd" d="M21.663 14.529q.114.181.182.406l.006.02c.149.507.149 1.208.149 2.34 0 1.03 0 1.702-.112 2.196l-.03.12c-.048.168-.11.314-.195.447a2.1 2.1 0 0 1-.552.585C20.607 21 19.904 21 18.5 21h-13c-1.404 0-2.107 0-2.611-.357a2.1 2.1 0 0 1-.552-.585C2 19.525 2 18.781 2 17.295c0-1.074 0-1.76.127-2.26l.008-.03.013-.049.001-.002q.07-.235.188-.424c.146-.231.333-.43.552-.584.504-.357 1.207-.357 2.611-.357h13c1.404 0 2.107 0 2.611.357.218.154.406.353.552.584M12.25 17a.75.75 0 0 0-1.5 0v1a.75.75 0 0 0 1.5 0zm1.75-.75a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75m3.25.75a.75.75 0 0 0-1.5 0v1a.75.75 0 0 0 1.5 0zm2.5 0a.75.75 0 0 0-1.5 0v1a.75.75 0 0 0 1.5 0z" clip-rule="evenodd"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldSsdSquare);

@@ -1,5 +1,5 @@
 /* Author: @moser-jose */
-/* Date: 2025-09-05 */
+/* Date: 2025-12-31 */
 /*
   - Builds src/types/Icon.d.ts mapping: { [variant]: [nameKey1, nameKey2, ...] }
   - Name key is the file path relative to the variant dir without extension (e.g. "bell-bing")

@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BrokenWidget: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M2.55 4.5c.065-.65.21-1.088.536-1.414C3.672 2.5 4.614 2.5 6.5 2.5s2.828 0 3.414.586.586 1.528.586 3.414 0 2.828-.586 3.414-1.528.586-3.414.586-2.828 0-3.414-.586c-.31-.31-.456-.718-.524-1.313M21.45 15.5c-.065-.65-.21-1.088-.536-1.414-.586-.586-1.528-.586-3.414-.586s-2.828 0-3.414.586-.586 1.528-.586 3.414 0 2.828.586 3.414 1.528.586 3.414.586 2.828 0 3.414-.586c.327-.326.471-.764.535-1.414"/><path stroke="${color}" stroke-width="1.5" d="M2.5 17.5c0-1.886 0-2.828.586-3.414S4.614 13.5 6.5 13.5s2.828 0 3.414.586.586 1.528.586 3.414 0 2.828-.586 3.414-1.528.586-3.414.586-2.828 0-3.414-.586S2.5 19.386 2.5 17.5Zm11-11c0-1.886 0-2.828.586-3.414S15.614 2.5 17.5 2.5s2.828 0 3.414.586.586 1.528.586 3.414 0 2.828-.586 3.414-1.528.586-3.414.586-2.828 0-3.414-.586S13.5 8.386 13.5 6.5Z"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BrokenWidget);

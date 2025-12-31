@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldDuotoneBugMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M5 10a7 7 0 0 1 14 0v5a7 7 0 1 1-14 0z" opacity=".5"/><path fill="${color}" d="M9.75 15.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75m.75-5.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5zm6.916-7.126a.75.75 0 1 0-.832-1.248l-2.786 1.857a7 7 0 0 1 1.674.687zm1.414 5.834a7 7 0 0 0-.477-1.402l.07-.033 1.798-.72a.75.75 0 1 1 .557 1.393l-1.797.72q-.075.03-.151.042M19 13.75h3a.75.75 0 0 0 0-1.5h-3zm-1.058 4.952q.369-.589.616-1.25a.8.8 0 0 1 .22.052l2 .8a.75.75 0 0 1-.556 1.393l-2-.8a.75.75 0 0 1-.28-.195m-12.5-1.25q.247.661.616 1.25a.75.75 0 0 1-.28.195l-2 .8a.75.75 0 1 1-.557-1.393l2-.8a.8.8 0 0 1 .22-.052M5 12.25H2a.75.75 0 0 0 0 1.5h3zm.648-5.194a7 7 0 0 0-.478 1.402 1 1 0 0 1-.15-.042l-1.798-.72a.75.75 0 0 1 .557-1.392l1.797.719q.038.014.072.033m2.88-3.136L6.584 2.624a.75.75 0 0 1 .832-1.248l2.786 1.857a7 7 0 0 0-1.674.687"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldDuotoneBugMinimalistic);

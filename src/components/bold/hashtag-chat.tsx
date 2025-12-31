@@ -1,0 +1,14 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+
+export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'height' | 'xml'> & {
+  size?: number;
+  color?: string;
+};
+
+const BoldHashtagChat: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+  const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="m17.814 21.236-.27.458a.635.635 0 0 1-1.087 0l-.271-.458c-.21-.355-.316-.533-.485-.63-.168-.1-.381-.103-.806-.11-.628-.01-1.022-.05-1.352-.186a2.5 2.5 0 0 1-1.353-1.353c-.19-.46-.19-1.042-.19-2.207v-.5c0-1.636 0-2.455.368-3.056a2.5 2.5 0 0 1 .826-.825c.6-.369 1.42-.369 3.056-.369h1.5c1.637 0 2.455 0 3.056.369a2.5 2.5 0 0 1 .826.825c.368.601.368 1.42.368 3.056v.5c0 1.165 0 1.747-.19 2.207a2.5 2.5 0 0 1-1.353 1.353c-.33.137-.724.175-1.352.186-.425.007-.638.01-.806.11-.17.097-.274.275-.485.63"/><path fill="${color}" fill-rule="evenodd" d="M10.2 2.278c.4.11.634.524.523.923L9.32 8.25h7.443l1.514-5.452a.75.75 0 1 1 1.446.402L18.32 8.25H22a.75.75 0 0 1 0 1.5h-4.098a.75.75 0 0 1-1.415 0H8.903l-1.527 5.5H9a.75.75 0 0 1 0 1.5H6.959L5.723 21.2a.75.75 0 0 1-1.446-.402l1.125-4.049H2a.75.75 0 0 1 0-1.5h3.819l1.528-5.5H4a.75.75 0 0 1 0-1.5h3.763L9.277 2.8a.75.75 0 0 1 .924-.522" clip-rule="evenodd"/></svg>`;
+  return <SvgXml xml={xml} width={size} height={size} {...props} />;
+};
+
+export default React.memo(BoldHashtagChat);
