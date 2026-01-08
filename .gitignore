@@ -5,13 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 .pnpm-debug.log*
-pnpm-lock.yaml
 .npmignore
 .npmrcssxcxc
-
-src/icons/
-src/scripts/
-
 
 # Build outputs
 dist/
@@ -33,16 +28,6 @@ expo/
 # Tests / Coverage
 coverage/
 
-# React Native specific
-*.iml
-*.hprof
-*.log
-/buck-out/
-/.buckconfig.local
-/.buckd/
-/.gradle/
-**/android/app/build/
-**/ios/Pods/
 
 
 .npmrc
