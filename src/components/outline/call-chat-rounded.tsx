@@ -11,4 +11,5 @@ const OutlineCallChatRounded: React.FC<IconProps> = ({ size = 24, color = '#1C27
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineCallChatRounded };
 export default React.memo(OutlineCallChatRounded);

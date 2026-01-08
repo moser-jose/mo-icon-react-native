@@ -11,4 +11,5 @@ const OutlineRemoteController2: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineRemoteController2 };
 export default React.memo(OutlineRemoteController2);

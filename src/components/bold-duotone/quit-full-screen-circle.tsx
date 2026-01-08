@@ -11,4 +11,5 @@ const BoldDuotoneQuitFullScreenCircle: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneQuitFullScreenCircle };
 export default React.memo(BoldDuotoneQuitFullScreenCircle);

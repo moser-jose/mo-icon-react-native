@@ -11,4 +11,5 @@ const BoldDuotoneNotificationUnreadLines: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneNotificationUnreadLines };
 export default React.memo(BoldDuotoneNotificationUnreadLines);

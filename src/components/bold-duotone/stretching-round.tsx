@@ -11,4 +11,5 @@ const BoldDuotoneStretchingRound: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneStretchingRound };
 export default React.memo(BoldDuotoneStretchingRound);

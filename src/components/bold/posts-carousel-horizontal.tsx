@@ -11,4 +11,5 @@ const BoldPostsCarouselHorizontal: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldPostsCarouselHorizontal };
 export default React.memo(BoldPostsCarouselHorizontal);

@@ -11,4 +11,5 @@ const BoldDumbbellLargeMinimalistic: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDumbbellLargeMinimalistic };
 export default React.memo(BoldDumbbellLargeMinimalistic);

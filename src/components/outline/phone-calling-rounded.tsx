@@ -11,4 +11,5 @@ const OutlinePhoneCallingRounded: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlinePhoneCallingRounded };
 export default React.memo(OutlinePhoneCallingRounded);

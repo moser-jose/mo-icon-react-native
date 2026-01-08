@@ -11,4 +11,5 @@ const BoldDuotoneCloudWaterdrop: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneCloudWaterdrop };
 export default React.memo(BoldDuotoneCloudWaterdrop);

@@ -11,4 +11,5 @@ const OutlineDuotoneSmartVacuumCleaner: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneSmartVacuumCleaner };
 export default React.memo(OutlineDuotoneSmartVacuumCleaner);

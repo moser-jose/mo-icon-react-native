@@ -11,4 +11,5 @@ const OutlineDuotoneDangerCircle: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneDangerCircle };
 export default React.memo(OutlineDuotoneDangerCircle);

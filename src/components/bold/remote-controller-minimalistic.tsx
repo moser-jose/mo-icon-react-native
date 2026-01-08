@@ -11,4 +11,5 @@ const BoldRemoteControllerMinimalistic: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldRemoteControllerMinimalistic };
 export default React.memo(BoldRemoteControllerMinimalistic);

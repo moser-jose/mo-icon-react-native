@@ -11,4 +11,5 @@ const OutlineDuotoneSpecialEffects: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneSpecialEffects };
 export default React.memo(OutlineDuotoneSpecialEffects);

@@ -11,4 +11,5 @@ const BoldDuotoneRecordCircleFull: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneRecordCircleFull };
 export default React.memo(BoldDuotoneRecordCircleFull);

@@ -11,4 +11,5 @@ const OutlineDuotoneCartLargeMinimalistic: React.FC<IconProps> = ({ size = 24, c
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneCartLargeMinimalistic };
 export default React.memo(OutlineDuotoneCartLargeMinimalistic);

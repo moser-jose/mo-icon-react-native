@@ -11,4 +11,5 @@ const Outline4k: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { Outline4k };
 export default React.memo(Outline4k);

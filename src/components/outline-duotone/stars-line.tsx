@@ -11,4 +11,5 @@ const OutlineDuotoneStarsLine: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneStarsLine };
 export default React.memo(OutlineDuotoneStarsLine);

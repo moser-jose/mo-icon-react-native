@@ -11,4 +11,5 @@ const BoldEmojiFunnySquare: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldEmojiFunnySquare };
 export default React.memo(BoldEmojiFunnySquare);

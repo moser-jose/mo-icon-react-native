@@ -11,4 +11,5 @@ const OutlineSortFromBottomToTop: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineSortFromBottomToTop };
 export default React.memo(OutlineSortFromBottomToTop);

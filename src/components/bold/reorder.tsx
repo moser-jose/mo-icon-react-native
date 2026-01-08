@@ -11,4 +11,5 @@ const BoldReorder: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldReorder };
 export default React.memo(BoldReorder);

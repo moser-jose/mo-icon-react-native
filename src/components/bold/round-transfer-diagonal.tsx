@@ -11,4 +11,5 @@ const BoldRoundTransferDiagonal: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldRoundTransferDiagonal };
 export default React.memo(BoldRoundTransferDiagonal);

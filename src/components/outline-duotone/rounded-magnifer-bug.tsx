@@ -11,4 +11,5 @@ const OutlineDuotoneRoundedMagniferBug: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneRoundedMagniferBug };
 export default React.memo(OutlineDuotoneRoundedMagniferBug);

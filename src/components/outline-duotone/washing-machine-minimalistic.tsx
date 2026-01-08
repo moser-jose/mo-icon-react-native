@@ -11,4 +11,5 @@ const OutlineDuotoneWashingMachineMinimalistic: React.FC<IconProps> = ({ size = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneWashingMachineMinimalistic };
 export default React.memo(OutlineDuotoneWashingMachineMinimalistic);

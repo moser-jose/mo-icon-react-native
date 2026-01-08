@@ -11,4 +11,5 @@ const OutlineWidget3: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineWidget3 };
 export default React.memo(OutlineWidget3);

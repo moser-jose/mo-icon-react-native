@@ -11,4 +11,5 @@ const OutlineSquareArrowLeftDown: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineSquareArrowLeftDown };
 export default React.memo(OutlineSquareArrowLeftDown);

@@ -11,4 +11,5 @@ const OutlineDuotoneUploadMinimalistic: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneUploadMinimalistic };
 export default React.memo(OutlineDuotoneUploadMinimalistic);

@@ -11,4 +11,5 @@ const BrokenAlignHorizontaSpacing: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenAlignHorizontaSpacing };
 export default React.memo(BrokenAlignHorizontaSpacing);

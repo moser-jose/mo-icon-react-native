@@ -11,4 +11,5 @@ const OutlineDuotoneBagMusic2: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneBagMusic2 };
 export default React.memo(OutlineDuotoneBagMusic2);

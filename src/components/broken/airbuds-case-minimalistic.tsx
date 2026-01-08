@@ -11,4 +11,5 @@ const BrokenAirbudsCaseMinimalistic: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenAirbudsCaseMinimalistic };
 export default React.memo(BrokenAirbudsCaseMinimalistic);

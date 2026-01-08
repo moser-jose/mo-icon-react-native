@@ -11,4 +11,5 @@ const BoldDuotoneSquareSortHorizontal: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneSquareSortHorizontal };
 export default React.memo(BoldDuotoneSquareSortHorizontal);

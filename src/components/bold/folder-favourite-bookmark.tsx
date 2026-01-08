@@ -11,4 +11,5 @@ const BoldFolderFavouriteBookmark: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldFolderFavouriteBookmark };
 export default React.memo(BoldFolderFavouriteBookmark);

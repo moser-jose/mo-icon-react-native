@@ -11,4 +11,5 @@ const BoldAtom: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldAtom };
 export default React.memo(BoldAtom);

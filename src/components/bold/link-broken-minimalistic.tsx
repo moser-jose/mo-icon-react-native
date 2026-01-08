@@ -11,4 +11,5 @@ const BoldLinkBrokenMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldLinkBrokenMinimalistic };
 export default React.memo(BoldLinkBrokenMinimalistic);

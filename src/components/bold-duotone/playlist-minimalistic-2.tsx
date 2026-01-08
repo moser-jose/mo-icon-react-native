@@ -11,4 +11,5 @@ const BoldDuotonePlaylistMinimalistic2: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotonePlaylistMinimalistic2 };
 export default React.memo(BoldDuotonePlaylistMinimalistic2);

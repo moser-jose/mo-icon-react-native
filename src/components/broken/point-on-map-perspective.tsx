@@ -11,4 +11,5 @@ const BrokenPointOnMapPerspective: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenPointOnMapPerspective };
 export default React.memo(BrokenPointOnMapPerspective);

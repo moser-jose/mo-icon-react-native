@@ -11,4 +11,5 @@ const OutlineDuotoneMouseMinimalistic: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMouseMinimalistic };
 export default React.memo(OutlineDuotoneMouseMinimalistic);

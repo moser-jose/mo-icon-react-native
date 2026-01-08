@@ -11,4 +11,5 @@ const OutlinePointOnMapPerspective: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlinePointOnMapPerspective };
 export default React.memo(OutlinePointOnMapPerspective);

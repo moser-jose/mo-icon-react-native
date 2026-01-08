@@ -11,4 +11,5 @@ const OutlineDuotoneRemoteControllerMinimalistic: React.FC<IconProps> = ({ size 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneRemoteControllerMinimalistic };
 export default React.memo(OutlineDuotoneRemoteControllerMinimalistic);

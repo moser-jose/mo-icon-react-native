@@ -11,4 +11,5 @@ const BoldDuotoneCalendarMinimalistic: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneCalendarMinimalistic };
 export default React.memo(BoldDuotoneCalendarMinimalistic);

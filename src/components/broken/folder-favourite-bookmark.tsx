@@ -11,4 +11,5 @@ const BrokenFolderFavouriteBookmark: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenFolderFavouriteBookmark };
 export default React.memo(BrokenFolderFavouriteBookmark);

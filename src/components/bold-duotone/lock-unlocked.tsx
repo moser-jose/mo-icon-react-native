@@ -11,4 +11,5 @@ const BoldDuotoneLockUnlocked: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneLockUnlocked };
 export default React.memo(BoldDuotoneLockUnlocked);

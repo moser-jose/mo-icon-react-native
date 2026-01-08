@@ -11,4 +11,5 @@ const OutlineDuotoneTextSquare: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneTextSquare };
 export default React.memo(OutlineDuotoneTextSquare);

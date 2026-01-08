@@ -11,4 +11,5 @@ const OutlineDuotoneVerifiedCheck: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneVerifiedCheck };
 export default React.memo(OutlineDuotoneVerifiedCheck);

@@ -11,4 +11,5 @@ const OutlineDuotoneSquareSortVertical: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneSquareSortVertical };
 export default React.memo(OutlineDuotoneSquareSortVertical);

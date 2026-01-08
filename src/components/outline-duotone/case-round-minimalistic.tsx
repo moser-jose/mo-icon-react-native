@@ -11,4 +11,5 @@ const OutlineDuotoneCaseRoundMinimalistic: React.FC<IconProps> = ({ size = 24, c
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneCaseRoundMinimalistic };
 export default React.memo(OutlineDuotoneCaseRoundMinimalistic);

@@ -11,4 +11,5 @@ const OutlineDuotoneBodyShapeMinimalistic: React.FC<IconProps> = ({ size = 24, c
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneBodyShapeMinimalistic };
 export default React.memo(OutlineDuotoneBodyShapeMinimalistic);

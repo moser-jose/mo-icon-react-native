@@ -11,4 +11,5 @@ const BrokenHome2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenHome2 };
 export default React.memo(BrokenHome2);

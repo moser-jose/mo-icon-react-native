@@ -11,4 +11,5 @@ const BoldDuotoneListUpMinimalistic: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneListUpMinimalistic };
 export default React.memo(BoldDuotoneListUpMinimalistic);

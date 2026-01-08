@@ -11,4 +11,5 @@ const BoldBatteryFull: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldBatteryFull };
 export default React.memo(BoldBatteryFull);

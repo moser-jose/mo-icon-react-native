@@ -11,4 +11,5 @@ const BoldDuotoneRewind10SecondsForward: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneRewind10SecondsForward };
 export default React.memo(BoldDuotoneRewind10SecondsForward);

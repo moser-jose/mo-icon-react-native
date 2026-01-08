@@ -11,4 +11,5 @@ const OutlineBolt: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineBolt };
 export default React.memo(OutlineBolt);

@@ -11,4 +11,5 @@ const BoldDuotoneMinimizeSquare3: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneMinimizeSquare3 };
 export default React.memo(BoldDuotoneMinimizeSquare3);

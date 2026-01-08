@@ -11,4 +11,5 @@ const OutlineDuotoneFolderSecurity: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneFolderSecurity };
 export default React.memo(OutlineDuotoneFolderSecurity);

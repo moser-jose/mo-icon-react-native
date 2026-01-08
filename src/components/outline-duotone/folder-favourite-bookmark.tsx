@@ -11,4 +11,5 @@ const OutlineDuotoneFolderFavouriteBookmark: React.FC<IconProps> = ({ size = 24,
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneFolderFavouriteBookmark };
 export default React.memo(OutlineDuotoneFolderFavouriteBookmark);

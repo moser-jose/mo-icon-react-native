@@ -11,4 +11,5 @@ const BoldDuotoneConfettiMinimalistic: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneConfettiMinimalistic };
 export default React.memo(BoldDuotoneConfettiMinimalistic);

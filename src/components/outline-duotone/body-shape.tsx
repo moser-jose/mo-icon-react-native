@@ -11,4 +11,5 @@ const OutlineDuotoneBodyShape: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneBodyShape };
 export default React.memo(OutlineDuotoneBodyShape);

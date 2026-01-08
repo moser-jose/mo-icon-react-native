@@ -11,4 +11,5 @@ const OutlineDuotoneCardholder: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneCardholder };
 export default React.memo(OutlineDuotoneCardholder);

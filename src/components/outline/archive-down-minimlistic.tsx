@@ -11,4 +11,5 @@ const OutlineArchiveDownMinimlistic: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineArchiveDownMinimlistic };
 export default React.memo(OutlineArchiveDownMinimlistic);

@@ -11,4 +11,5 @@ const BoldDuotoneCalendar: React.FC<IconProps> = ({ size = 24, color = '#1C274C'
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneCalendar };
 export default React.memo(BoldDuotoneCalendar);

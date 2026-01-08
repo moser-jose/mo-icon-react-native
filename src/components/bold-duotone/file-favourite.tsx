@@ -11,4 +11,5 @@ const BoldDuotoneFileFavourite: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneFileFavourite };
 export default React.memo(BoldDuotoneFileFavourite);

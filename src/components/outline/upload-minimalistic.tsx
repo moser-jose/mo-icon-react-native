@@ -11,4 +11,5 @@ const OutlineUploadMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineUploadMinimalistic };
 export default React.memo(OutlineUploadMinimalistic);

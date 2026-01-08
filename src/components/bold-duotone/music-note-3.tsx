@@ -11,4 +11,5 @@ const BoldDuotoneMusicNote3: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneMusicNote3 };
 export default React.memo(BoldDuotoneMusicNote3);

@@ -11,4 +11,5 @@ const OutlineDuotoneVideoFramePlayVertical: React.FC<IconProps> = ({ size = 24, 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneVideoFramePlayVertical };
 export default React.memo(OutlineDuotoneVideoFramePlayVertical);

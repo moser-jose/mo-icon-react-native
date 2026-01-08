@@ -11,4 +11,5 @@ const BrokenPlaaylistMinimalistic: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenPlaaylistMinimalistic };
 export default React.memo(BrokenPlaaylistMinimalistic);

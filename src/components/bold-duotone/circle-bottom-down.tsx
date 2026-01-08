@@ -11,4 +11,5 @@ const BoldDuotoneCircleBottomDown: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneCircleBottomDown };
 export default React.memo(BoldDuotoneCircleBottomDown);

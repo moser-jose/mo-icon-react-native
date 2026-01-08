@@ -11,4 +11,5 @@ const OutlineSmartphoneVibration: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineSmartphoneVibration };
 export default React.memo(OutlineSmartphoneVibration);

@@ -11,4 +11,5 @@ const BoldChart2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...prop
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldChart2 };
 export default React.memo(BoldChart2);

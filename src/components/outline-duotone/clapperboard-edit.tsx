@@ -11,4 +11,5 @@ const OutlineDuotoneClapperboardEdit: React.FC<IconProps> = ({ size = 24, color 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneClapperboardEdit };
 export default React.memo(OutlineDuotoneClapperboardEdit);

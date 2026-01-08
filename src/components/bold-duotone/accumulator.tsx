@@ -11,4 +11,5 @@ const BoldDuotoneAccumulator: React.FC<IconProps> = ({ size = 24, color = '#1C27
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneAccumulator };
 export default React.memo(BoldDuotoneAccumulator);

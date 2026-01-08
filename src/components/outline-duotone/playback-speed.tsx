@@ -11,4 +11,5 @@ const OutlineDuotonePlaybackSpeed: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotonePlaybackSpeed };
 export default React.memo(OutlineDuotonePlaybackSpeed);

@@ -10,6 +10,10 @@ yarn.lock
 .npmignore
 .npmrcssxcxc
 
+src/icons/
+src/scripts/
+
+
 # Build outputs
 dist/
 build/
@@ -40,12 +44,6 @@ coverage/
 /.gradle/
 **/android/app/build/
 **/ios/Pods/
-
-# Generated icon files (can be re-created)
-src/icons/svg/
-src/registry.ts
-src/types.ts
-src/icon-names.json
 
 
 .npmrc

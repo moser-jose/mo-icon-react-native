@@ -11,4 +11,5 @@ const OutlineDuotoneChefHatMinimalistic: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneChefHatMinimalistic };
 export default React.memo(OutlineDuotoneChefHatMinimalistic);

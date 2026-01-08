@@ -11,4 +11,5 @@ const BrokenMapPointFavourite: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenMapPointFavourite };
 export default React.memo(BrokenMapPointFavourite);

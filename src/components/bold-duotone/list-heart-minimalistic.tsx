@@ -11,4 +11,5 @@ const BoldDuotoneListHeartMinimalistic: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneListHeartMinimalistic };
 export default React.memo(BoldDuotoneListHeartMinimalistic);

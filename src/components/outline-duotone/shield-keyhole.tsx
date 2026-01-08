@@ -11,4 +11,5 @@ const OutlineDuotoneShieldKeyhole: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneShieldKeyhole };
 export default React.memo(OutlineDuotoneShieldKeyhole);

@@ -11,4 +11,5 @@ const OutlineChatSquareCall: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineChatSquareCall };
 export default React.memo(OutlineChatSquareCall);

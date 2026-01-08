@@ -11,4 +11,5 @@ const OutlineDuotoneCloudSnowfallMinimalistic: React.FC<IconProps> = ({ size = 2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneCloudSnowfallMinimalistic };
 export default React.memo(OutlineDuotoneCloudSnowfallMinimalistic);

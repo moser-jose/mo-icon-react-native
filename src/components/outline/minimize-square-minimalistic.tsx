@@ -11,4 +11,5 @@ const OutlineMinimizeSquareMinimalistic: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineMinimizeSquareMinimalistic };
 export default React.memo(OutlineMinimizeSquareMinimalistic);

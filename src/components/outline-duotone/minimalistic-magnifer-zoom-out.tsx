@@ -11,4 +11,5 @@ const OutlineDuotoneMinimalisticMagniferZoomOut: React.FC<IconProps> = ({ size =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMinimalisticMagniferZoomOut };
 export default React.memo(OutlineDuotoneMinimalisticMagniferZoomOut);

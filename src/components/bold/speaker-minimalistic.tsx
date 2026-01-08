@@ -11,4 +11,5 @@ const BoldSpeakerMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldSpeakerMinimalistic };
 export default React.memo(BoldSpeakerMinimalistic);

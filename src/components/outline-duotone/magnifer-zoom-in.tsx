@@ -11,4 +11,5 @@ const OutlineDuotoneMagniferZoomIn: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMagniferZoomIn };
 export default React.memo(OutlineDuotoneMagniferZoomIn);

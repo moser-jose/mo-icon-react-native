@@ -11,4 +11,5 @@ const OutlineRewind10SecondsForward: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineRewind10SecondsForward };
 export default React.memo(OutlineRewind10SecondsForward);

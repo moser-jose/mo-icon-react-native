@@ -11,4 +11,5 @@ const BoldKeyMinimalisticSquare3: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldKeyMinimalisticSquare3 };
 export default React.memo(BoldKeyMinimalisticSquare3);

@@ -11,4 +11,5 @@ const BoldDuotoneClockSquare: React.FC<IconProps> = ({ size = 24, color = '#1C27
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneClockSquare };
 export default React.memo(BoldDuotoneClockSquare);

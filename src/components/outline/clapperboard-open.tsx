@@ -11,4 +11,5 @@ const OutlineClapperboardOpen: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineClapperboardOpen };
 export default React.memo(OutlineClapperboardOpen);

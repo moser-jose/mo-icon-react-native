@@ -11,4 +11,5 @@ const BoldMinimalisticMagniferZoomIn: React.FC<IconProps> = ({ size = 24, color 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldMinimalisticMagniferZoomIn };
 export default React.memo(BoldMinimalisticMagniferZoomIn);

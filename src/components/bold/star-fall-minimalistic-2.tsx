@@ -11,4 +11,5 @@ const BoldStarFallMinimalistic2: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldStarFallMinimalistic2 };
 export default React.memo(BoldStarFallMinimalistic2);

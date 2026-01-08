@@ -11,4 +11,5 @@ const OutlineSidebarMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineSidebarMinimalistic };
 export default React.memo(OutlineSidebarMinimalistic);

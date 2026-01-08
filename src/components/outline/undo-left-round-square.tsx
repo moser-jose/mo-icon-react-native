@@ -11,4 +11,5 @@ const OutlineUndoLeftRoundSquare: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineUndoLeftRoundSquare };
 export default React.memo(OutlineUndoLeftRoundSquare);

@@ -11,4 +11,5 @@ const OutlineDuotoneConfettiMinimalistic: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneConfettiMinimalistic };
 export default React.memo(OutlineDuotoneConfettiMinimalistic);

@@ -11,4 +11,5 @@ const OutlineDuotoneMapPointRotate: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMapPointRotate };
 export default React.memo(OutlineDuotoneMapPointRotate);

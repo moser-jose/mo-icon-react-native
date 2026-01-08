@@ -11,4 +11,5 @@ const BoldCalculatorMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldCalculatorMinimalistic };
 export default React.memo(BoldCalculatorMinimalistic);

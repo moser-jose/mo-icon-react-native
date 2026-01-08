@@ -11,4 +11,5 @@ const BoldRunning2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldRunning2 };
 export default React.memo(BoldRunning2);

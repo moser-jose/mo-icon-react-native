@@ -11,4 +11,5 @@ const BoldMaskHapply: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldMaskHapply };
 export default React.memo(BoldMaskHapply);

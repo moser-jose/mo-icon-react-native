@@ -11,4 +11,5 @@ const BrokenKeyMinimalisticSquare3: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenKeyMinimalisticSquare3 };
 export default React.memo(BrokenKeyMinimalisticSquare3);

@@ -11,4 +11,5 @@ const BoldListArrowDownMinimalistic: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldListArrowDownMinimalistic };
 export default React.memo(BoldListArrowDownMinimalistic);

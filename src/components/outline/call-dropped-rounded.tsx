@@ -11,4 +11,5 @@ const OutlineCallDroppedRounded: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineCallDroppedRounded };
 export default React.memo(OutlineCallDroppedRounded);

@@ -11,4 +11,5 @@ const BoldBlackHole3: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldBlackHole3 };
 export default React.memo(BoldBlackHole3);

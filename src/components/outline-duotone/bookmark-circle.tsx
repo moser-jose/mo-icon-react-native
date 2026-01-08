@@ -11,4 +11,5 @@ const OutlineDuotoneBookmarkCircle: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneBookmarkCircle };
 export default React.memo(OutlineDuotoneBookmarkCircle);

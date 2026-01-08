@@ -11,4 +11,5 @@ const OutlineDuotoneMonitorCamera: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMonitorCamera };
 export default React.memo(OutlineDuotoneMonitorCamera);

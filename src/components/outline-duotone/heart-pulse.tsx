@@ -11,4 +11,5 @@ const OutlineDuotoneHeartPulse: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneHeartPulse };
 export default React.memo(OutlineDuotoneHeartPulse);

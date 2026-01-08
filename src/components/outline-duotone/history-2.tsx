@@ -11,4 +11,5 @@ const OutlineDuotoneHistory2: React.FC<IconProps> = ({ size = 24, color = '#1C27
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneHistory2 };
 export default React.memo(OutlineDuotoneHistory2);

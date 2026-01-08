@@ -11,4 +11,5 @@ const BoldDuotoneAlarmSleep: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneAlarmSleep };
 export default React.memo(BoldDuotoneAlarmSleep);

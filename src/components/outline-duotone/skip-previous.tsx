@@ -11,4 +11,5 @@ const OutlineDuotoneSkipPrevious: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneSkipPrevious };
 export default React.memo(OutlineDuotoneSkipPrevious);

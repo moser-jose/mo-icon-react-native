@@ -11,4 +11,5 @@ const BoldDuotoneRoundAltArrowDown: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneRoundAltArrowDown };
 export default React.memo(BoldDuotoneRoundAltArrowDown);

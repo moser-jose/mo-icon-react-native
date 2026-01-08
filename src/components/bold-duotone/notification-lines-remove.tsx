@@ -11,4 +11,5 @@ const BoldDuotoneNotificationLinesRemove: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneNotificationLinesRemove };
 export default React.memo(BoldDuotoneNotificationLinesRemove);

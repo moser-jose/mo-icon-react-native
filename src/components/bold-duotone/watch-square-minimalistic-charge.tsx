@@ -11,4 +11,5 @@ const BoldDuotoneWatchSquareMinimalisticCharge: React.FC<IconProps> = ({ size = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneWatchSquareMinimalisticCharge };
 export default React.memo(BoldDuotoneWatchSquareMinimalisticCharge);

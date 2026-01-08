@@ -11,4 +11,5 @@ const BrokenMaximizeSquareMinimalistic: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenMaximizeSquareMinimalistic };
 export default React.memo(BrokenMaximizeSquareMinimalistic);

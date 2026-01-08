@@ -11,4 +11,5 @@ const BoldRoundedMagniferZoomOut: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldRoundedMagniferZoomOut };
 export default React.memo(BoldRoundedMagniferZoomOut);

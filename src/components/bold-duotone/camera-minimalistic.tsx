@@ -11,4 +11,5 @@ const BoldDuotoneCameraMinimalistic: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneCameraMinimalistic };
 export default React.memo(BoldDuotoneCameraMinimalistic);

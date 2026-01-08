@@ -11,4 +11,5 @@ const OutlineDuotoneRulerAngular: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneRulerAngular };
 export default React.memo(OutlineDuotoneRulerAngular);

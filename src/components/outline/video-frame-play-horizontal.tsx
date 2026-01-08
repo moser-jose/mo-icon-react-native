@@ -11,4 +11,5 @@ const OutlineVideoFramePlayHorizontal: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineVideoFramePlayHorizontal };
 export default React.memo(OutlineVideoFramePlayHorizontal);

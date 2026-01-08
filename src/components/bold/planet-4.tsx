@@ -11,4 +11,5 @@ const BoldPlanet4: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldPlanet4 };
 export default React.memo(BoldPlanet4);

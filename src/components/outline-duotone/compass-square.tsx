@@ -11,4 +11,5 @@ const OutlineDuotoneCompassSquare: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneCompassSquare };
 export default React.memo(OutlineDuotoneCompassSquare);

@@ -11,4 +11,5 @@ const BrokenRoundDoubleAltArrowDown: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenRoundDoubleAltArrowDown };
 export default React.memo(BrokenRoundDoubleAltArrowDown);

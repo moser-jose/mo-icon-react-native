@@ -11,4 +11,5 @@ const OutlineDuotoneMenuDotsCircle: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMenuDotsCircle };
 export default React.memo(OutlineDuotoneMenuDotsCircle);

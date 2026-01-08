@@ -11,4 +11,5 @@ const OutlineDuotoneServerSquareCloud: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneServerSquareCloud };
 export default React.memo(OutlineDuotoneServerSquareCloud);

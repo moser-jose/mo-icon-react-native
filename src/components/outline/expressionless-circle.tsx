@@ -11,4 +11,5 @@ const OutlineExpressionlessCircle: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineExpressionlessCircle };
 export default React.memo(OutlineExpressionlessCircle);

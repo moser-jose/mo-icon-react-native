@@ -11,4 +11,5 @@ const BoldDuotoneWiFiRouterMinimalistic: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneWiFiRouterMinimalistic };
 export default React.memo(BoldDuotoneWiFiRouterMinimalistic);

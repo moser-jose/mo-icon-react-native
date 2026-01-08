@@ -11,4 +11,5 @@ const BoldDuotoneChatRoundCheck: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneChatRoundCheck };
 export default React.memo(BoldDuotoneChatRoundCheck);

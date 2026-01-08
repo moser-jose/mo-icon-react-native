@@ -11,4 +11,5 @@ const OutlineDuotonePassportMinimalistic: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotonePassportMinimalistic };
 export default React.memo(OutlineDuotonePassportMinimalistic);

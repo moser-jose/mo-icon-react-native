@@ -11,4 +11,5 @@ const BoldDuotoneMapPointHospital: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneMapPointHospital };
 export default React.memo(BoldDuotoneMapPointHospital);

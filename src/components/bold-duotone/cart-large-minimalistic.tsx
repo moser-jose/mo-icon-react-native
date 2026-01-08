@@ -11,4 +11,5 @@ const BoldDuotoneCartLargeMinimalistic: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneCartLargeMinimalistic };
 export default React.memo(BoldDuotoneCartLargeMinimalistic);

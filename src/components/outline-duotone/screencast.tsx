@@ -11,4 +11,5 @@ const OutlineDuotoneScreencast: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneScreencast };
 export default React.memo(OutlineDuotoneScreencast);

@@ -11,4 +11,5 @@ const OutlineUserMinusRounded: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineUserMinusRounded };
 export default React.memo(OutlineUserMinusRounded);

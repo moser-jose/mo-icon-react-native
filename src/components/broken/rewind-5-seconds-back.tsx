@@ -11,4 +11,5 @@ const BrokenRewind5SecondsBack: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenRewind5SecondsBack };
 export default React.memo(BrokenRewind5SecondsBack);

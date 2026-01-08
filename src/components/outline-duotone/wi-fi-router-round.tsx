@@ -11,4 +11,5 @@ const OutlineDuotoneWiFiRouterRound: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneWiFiRouterRound };
 export default React.memo(OutlineDuotoneWiFiRouterRound);

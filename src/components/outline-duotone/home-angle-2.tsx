@@ -11,4 +11,5 @@ const OutlineDuotoneHomeAngle2: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneHomeAngle2 };
 export default React.memo(OutlineDuotoneHomeAngle2);

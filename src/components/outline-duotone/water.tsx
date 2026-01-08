@@ -11,4 +11,5 @@ const OutlineDuotoneWater: React.FC<IconProps> = ({ size = 24, color = '#1C274C'
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneWater };
 export default React.memo(OutlineDuotoneWater);

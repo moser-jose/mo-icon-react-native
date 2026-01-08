@@ -11,4 +11,5 @@ const BrokenCircleTopUp: React.FC<IconProps> = ({ size = 24, color = '#1C274C', 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenCircleTopUp };
 export default React.memo(BrokenCircleTopUp);

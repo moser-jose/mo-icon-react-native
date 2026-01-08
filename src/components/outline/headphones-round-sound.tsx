@@ -11,4 +11,5 @@ const OutlineHeadphonesRoundSound: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineHeadphonesRoundSound };
 export default React.memo(OutlineHeadphonesRoundSound);

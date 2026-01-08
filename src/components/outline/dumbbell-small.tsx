@@ -11,4 +11,5 @@ const OutlineDumbbellSmall: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDumbbellSmall };
 export default React.memo(OutlineDumbbellSmall);

@@ -11,4 +11,5 @@ const BrokenCodeCircle: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenCodeCircle };
 export default React.memo(BrokenCodeCircle);

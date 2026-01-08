@@ -11,4 +11,5 @@ const BoldDollar: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...prop
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDollar };
 export default React.memo(BoldDollar);

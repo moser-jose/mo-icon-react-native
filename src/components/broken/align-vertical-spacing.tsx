@@ -11,4 +11,5 @@ const BrokenAlignVerticalSpacing: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenAlignVerticalSpacing };
 export default React.memo(BrokenAlignVerticalSpacing);

@@ -11,4 +11,5 @@ const BoldDuotoneAirbudsRight: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneAirbudsRight };
 export default React.memo(BoldDuotoneAirbudsRight);

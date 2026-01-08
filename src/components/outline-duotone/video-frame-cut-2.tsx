@@ -11,4 +11,5 @@ const OutlineDuotoneVideoFrameCut2: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneVideoFrameCut2 };
 export default React.memo(OutlineDuotoneVideoFrameCut2);

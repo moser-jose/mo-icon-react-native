@@ -11,4 +11,5 @@ const BoldDuotoneSmartphoneRotateOrientation: React.FC<IconProps> = ({ size = 24
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneSmartphoneRotateOrientation };
 export default React.memo(BoldDuotoneSmartphoneRotateOrientation);

@@ -11,4 +11,5 @@ const OutlineCalculatorMinimalistic: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineCalculatorMinimalistic };
 export default React.memo(OutlineCalculatorMinimalistic);

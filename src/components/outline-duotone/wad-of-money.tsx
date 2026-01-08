@@ -11,4 +11,5 @@ const OutlineDuotoneWadOfMoney: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneWadOfMoney };
 export default React.memo(OutlineDuotoneWadOfMoney);

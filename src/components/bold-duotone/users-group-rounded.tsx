@@ -11,4 +11,5 @@ const BoldDuotoneUsersGroupRounded: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneUsersGroupRounded };
 export default React.memo(BoldDuotoneUsersGroupRounded);

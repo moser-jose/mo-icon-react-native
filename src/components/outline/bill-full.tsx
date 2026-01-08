@@ -11,4 +11,5 @@ const OutlineBillFull: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineBillFull };
 export default React.memo(OutlineBillFull);

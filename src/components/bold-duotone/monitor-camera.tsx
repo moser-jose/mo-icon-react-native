@@ -11,4 +11,5 @@ const BoldDuotoneMonitorCamera: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneMonitorCamera };
 export default React.memo(BoldDuotoneMonitorCamera);

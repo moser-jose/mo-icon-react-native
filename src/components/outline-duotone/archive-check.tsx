@@ -11,4 +11,5 @@ const OutlineDuotoneArchiveCheck: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneArchiveCheck };
 export default React.memo(OutlineDuotoneArchiveCheck);

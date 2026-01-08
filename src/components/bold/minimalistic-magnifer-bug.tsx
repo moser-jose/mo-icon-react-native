@@ -11,4 +11,5 @@ const BoldMinimalisticMagniferBug: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldMinimalisticMagniferBug };
 export default React.memo(BoldMinimalisticMagniferBug);

@@ -11,4 +11,5 @@ const BoldDuotoneStreetsNavigation: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneStreetsNavigation };
 export default React.memo(BoldDuotoneStreetsNavigation);

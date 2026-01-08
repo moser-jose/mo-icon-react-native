@@ -11,4 +11,5 @@ const BoldCalendarMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldCalendarMinimalistic };
 export default React.memo(BoldCalendarMinimalistic);

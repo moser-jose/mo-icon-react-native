@@ -11,4 +11,5 @@ const BoldDuotoneAltArrowRight: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneAltArrowRight };
 export default React.memo(BoldDuotoneAltArrowRight);

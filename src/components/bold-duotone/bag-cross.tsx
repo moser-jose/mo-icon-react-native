@@ -11,4 +11,5 @@ const BoldDuotoneBagCross: React.FC<IconProps> = ({ size = 24, color = '#1C274C'
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneBagCross };
 export default React.memo(BoldDuotoneBagCross);

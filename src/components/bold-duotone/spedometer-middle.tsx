@@ -11,4 +11,5 @@ const BoldDuotoneSpedometerMiddle: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneSpedometerMiddle };
 export default React.memo(BoldDuotoneSpedometerMiddle);

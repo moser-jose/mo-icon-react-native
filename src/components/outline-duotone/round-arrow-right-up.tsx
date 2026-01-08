@@ -11,4 +11,5 @@ const OutlineDuotoneRoundArrowRightUp: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneRoundArrowRightUp };
 export default React.memo(OutlineDuotoneRoundArrowRightUp);

@@ -11,4 +11,5 @@ const BrokenMapPointSchool: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenMapPointSchool };
 export default React.memo(BrokenMapPointSchool);

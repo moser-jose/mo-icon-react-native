@@ -11,4 +11,5 @@ const OutlineCard2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineCard2 };
 export default React.memo(OutlineCard2);

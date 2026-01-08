@@ -11,4 +11,5 @@ const BoldMinusCircle: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldMinusCircle };
 export default React.memo(BoldMinusCircle);

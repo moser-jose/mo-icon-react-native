@@ -11,4 +11,5 @@ const BoldPasswordMinimalisticInput: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldPasswordMinimalisticInput };
 export default React.memo(BoldPasswordMinimalisticInput);

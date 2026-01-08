@@ -11,4 +11,5 @@ const OutlineDuotoneFloorLamp: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneFloorLamp };
 export default React.memo(OutlineDuotoneFloorLamp);

@@ -11,4 +11,5 @@ const OutlineDuotoneSliderMinimalisticHorizontal: React.FC<IconProps> = ({ size 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneSliderMinimalisticHorizontal };
 export default React.memo(OutlineDuotoneSliderMinimalisticHorizontal);

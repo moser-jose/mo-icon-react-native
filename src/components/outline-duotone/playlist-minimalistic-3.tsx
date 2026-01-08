@@ -11,4 +11,5 @@ const OutlineDuotonePlaylistMinimalistic3: React.FC<IconProps> = ({ size = 24, c
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotonePlaylistMinimalistic3 };
 export default React.memo(OutlineDuotonePlaylistMinimalistic3);

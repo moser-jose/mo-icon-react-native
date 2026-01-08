@@ -11,4 +11,5 @@ const BoldDuotoneMapPointRemove: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneMapPointRemove };
 export default React.memo(BoldDuotoneMapPointRemove);

@@ -11,4 +11,5 @@ const BoldDuotonePieChart2: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotonePieChart2 };
 export default React.memo(BoldDuotonePieChart2);

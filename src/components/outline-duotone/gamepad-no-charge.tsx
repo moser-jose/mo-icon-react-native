@@ -11,4 +11,5 @@ const OutlineDuotoneGamepadNoCharge: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneGamepadNoCharge };
 export default React.memo(OutlineDuotoneGamepadNoCharge);

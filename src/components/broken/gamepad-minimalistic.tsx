@@ -11,4 +11,5 @@ const BrokenGamepadMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenGamepadMinimalistic };
 export default React.memo(BrokenGamepadMinimalistic);

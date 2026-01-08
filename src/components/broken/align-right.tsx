@@ -11,4 +11,5 @@ const BrokenAlignRight: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenAlignRight };
 export default React.memo(BrokenAlignRight);

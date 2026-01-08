@@ -11,4 +11,5 @@ const OutlineDuotoneBookBookmarkMinimalistic: React.FC<IconProps> = ({ size = 24
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneBookBookmarkMinimalistic };
 export default React.memo(OutlineDuotoneBookBookmarkMinimalistic);

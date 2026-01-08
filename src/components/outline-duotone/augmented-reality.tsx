@@ -11,4 +11,5 @@ const OutlineDuotoneAugmentedReality: React.FC<IconProps> = ({ size = 24, color 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneAugmentedReality };
 export default React.memo(OutlineDuotoneAugmentedReality);

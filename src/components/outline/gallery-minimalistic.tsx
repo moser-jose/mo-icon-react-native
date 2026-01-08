@@ -11,4 +11,5 @@ const OutlineGalleryMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineGalleryMinimalistic };
 export default React.memo(OutlineGalleryMinimalistic);

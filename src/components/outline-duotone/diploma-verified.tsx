@@ -11,4 +11,5 @@ const OutlineDuotoneDiplomaVerified: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneDiplomaVerified };
 export default React.memo(OutlineDuotoneDiplomaVerified);

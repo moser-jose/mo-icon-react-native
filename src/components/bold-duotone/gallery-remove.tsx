@@ -11,4 +11,5 @@ const BoldDuotoneGalleryRemove: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneGalleryRemove };
 export default React.memo(BoldDuotoneGalleryRemove);

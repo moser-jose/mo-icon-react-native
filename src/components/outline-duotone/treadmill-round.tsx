@@ -11,4 +11,5 @@ const OutlineDuotoneTreadmillRound: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneTreadmillRound };
 export default React.memo(OutlineDuotoneTreadmillRound);

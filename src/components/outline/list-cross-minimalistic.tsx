@@ -11,4 +11,5 @@ const OutlineListCrossMinimalistic: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineListCrossMinimalistic };
 export default React.memo(OutlineListCrossMinimalistic);

@@ -11,4 +11,5 @@ const BrokenRecordMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenRecordMinimalistic };
 export default React.memo(BrokenRecordMinimalistic);

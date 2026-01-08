@@ -11,4 +11,5 @@ const BoldSortFromBottomToTop: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldSortFromBottomToTop };
 export default React.memo(BoldSortFromBottomToTop);

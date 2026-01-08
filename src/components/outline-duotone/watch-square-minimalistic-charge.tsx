@@ -11,4 +11,5 @@ const OutlineDuotoneWatchSquareMinimalisticCharge: React.FC<IconProps> = ({ size
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneWatchSquareMinimalisticCharge };
 export default React.memo(OutlineDuotoneWatchSquareMinimalisticCharge);

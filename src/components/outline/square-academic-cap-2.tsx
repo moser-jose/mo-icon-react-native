@@ -11,4 +11,5 @@ const OutlineSquareAcademicCap2: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineSquareAcademicCap2 };
 export default React.memo(OutlineSquareAcademicCap2);

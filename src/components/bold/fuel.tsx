@@ -11,4 +11,5 @@ const BoldFuel: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldFuel };
 export default React.memo(BoldFuel);

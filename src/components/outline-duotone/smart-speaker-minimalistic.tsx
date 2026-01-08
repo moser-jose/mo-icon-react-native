@@ -11,4 +11,5 @@ const OutlineDuotoneSmartSpeakerMinimalistic: React.FC<IconProps> = ({ size = 24
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneSmartSpeakerMinimalistic };
 export default React.memo(OutlineDuotoneSmartSpeakerMinimalistic);

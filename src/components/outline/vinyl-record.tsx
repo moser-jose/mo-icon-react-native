@@ -11,4 +11,5 @@ const OutlineVinylRecord: React.FC<IconProps> = ({ size = 24, color = '#1C274C',
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineVinylRecord };
 export default React.memo(OutlineVinylRecord);

@@ -11,4 +11,5 @@ const BrokenSliderHorizontal: React.FC<IconProps> = ({ size = 24, color = '#1C27
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenSliderHorizontal };
 export default React.memo(BrokenSliderHorizontal);

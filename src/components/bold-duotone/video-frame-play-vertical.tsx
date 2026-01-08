@@ -11,4 +11,5 @@ const BoldDuotoneVideoFramePlayVertical: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneVideoFramePlayVertical };
 export default React.memo(BoldDuotoneVideoFramePlayVertical);

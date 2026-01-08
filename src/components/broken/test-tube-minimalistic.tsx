@@ -11,4 +11,5 @@ const BrokenTestTubeMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenTestTubeMinimalistic };
 export default React.memo(BrokenTestTubeMinimalistic);

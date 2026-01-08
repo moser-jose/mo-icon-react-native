@@ -11,4 +11,5 @@ const OutlineTrashBinMinimalistic: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineTrashBinMinimalistic };
 export default React.memo(OutlineTrashBinMinimalistic);

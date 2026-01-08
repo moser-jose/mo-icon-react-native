@@ -11,4 +11,5 @@ const BoldDuotoneSquareTransferVertical: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneSquareTransferVertical };
 export default React.memo(BoldDuotoneSquareTransferVertical);

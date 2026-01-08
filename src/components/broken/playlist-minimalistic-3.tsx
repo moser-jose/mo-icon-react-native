@@ -11,4 +11,5 @@ const BrokenPlaylistMinimalistic3: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenPlaylistMinimalistic3 };
 export default React.memo(BrokenPlaylistMinimalistic3);

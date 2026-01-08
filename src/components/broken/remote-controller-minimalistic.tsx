@@ -11,4 +11,5 @@ const BrokenRemoteControllerMinimalistic: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenRemoteControllerMinimalistic };
 export default React.memo(BrokenRemoteControllerMinimalistic);

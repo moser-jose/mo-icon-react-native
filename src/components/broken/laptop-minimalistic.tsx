@@ -11,4 +11,5 @@ const BrokenLaptopMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenLaptopMinimalistic };
 export default React.memo(BrokenLaptopMinimalistic);

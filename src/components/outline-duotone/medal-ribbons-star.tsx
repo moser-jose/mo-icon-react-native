@@ -11,4 +11,5 @@ const OutlineDuotoneMedalRibbonsStar: React.FC<IconProps> = ({ size = 24, color 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMedalRibbonsStar };
 export default React.memo(OutlineDuotoneMedalRibbonsStar);

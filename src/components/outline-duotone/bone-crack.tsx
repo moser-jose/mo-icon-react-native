@@ -11,4 +11,5 @@ const OutlineDuotoneBoneCrack: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneBoneCrack };
 export default React.memo(OutlineDuotoneBoneCrack);

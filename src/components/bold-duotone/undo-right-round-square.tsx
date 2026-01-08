@@ -11,4 +11,5 @@ const BoldDuotoneUndoRightRoundSquare: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneUndoRightRoundSquare };
 export default React.memo(BoldDuotoneUndoRightRoundSquare);

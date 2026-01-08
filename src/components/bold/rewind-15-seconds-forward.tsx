@@ -11,4 +11,5 @@ const BoldRewind15SecondsForward: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldRewind15SecondsForward };
 export default React.memo(BoldRewind15SecondsForward);

@@ -11,4 +11,5 @@ const BoldArmchair: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldArmchair };
 export default React.memo(BoldArmchair);

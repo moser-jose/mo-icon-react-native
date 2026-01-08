@@ -11,4 +11,5 @@ const OutlineDuotoneElectricRefueling: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneElectricRefueling };
 export default React.memo(OutlineDuotoneElectricRefueling);

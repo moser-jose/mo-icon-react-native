@@ -11,4 +11,5 @@ const OutlineDuotoneTextCross: React.FC<IconProps> = ({ size = 24, color = '#1C2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneTextCross };
 export default React.memo(OutlineDuotoneTextCross);

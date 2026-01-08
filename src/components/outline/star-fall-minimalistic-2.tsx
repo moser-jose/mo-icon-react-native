@@ -11,4 +11,5 @@ const OutlineStarFallMinimalistic2: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineStarFallMinimalistic2 };
 export default React.memo(OutlineStarFallMinimalistic2);

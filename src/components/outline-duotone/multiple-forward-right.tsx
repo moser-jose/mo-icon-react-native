@@ -11,4 +11,5 @@ const OutlineDuotoneMultipleForwardRight: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMultipleForwardRight };
 export default React.memo(OutlineDuotoneMultipleForwardRight);

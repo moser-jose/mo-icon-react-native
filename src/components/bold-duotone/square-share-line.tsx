@@ -11,4 +11,5 @@ const BoldDuotoneSquareShareLine: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneSquareShareLine };
 export default React.memo(BoldDuotoneSquareShareLine);

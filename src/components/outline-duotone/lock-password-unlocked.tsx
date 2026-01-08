@@ -11,4 +11,5 @@ const OutlineDuotoneLockPasswordUnlocked: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneLockPasswordUnlocked };
 export default React.memo(OutlineDuotoneLockPasswordUnlocked);

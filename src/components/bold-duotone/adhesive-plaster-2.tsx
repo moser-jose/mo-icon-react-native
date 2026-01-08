@@ -11,4 +11,5 @@ const BoldDuotoneAdhesivePlaster2: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneAdhesivePlaster2 };
 export default React.memo(BoldDuotoneAdhesivePlaster2);

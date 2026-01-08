@@ -11,4 +11,5 @@ const BoldDuotoneTextUnderline: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneTextUnderline };
 export default React.memo(BoldDuotoneTextUnderline);

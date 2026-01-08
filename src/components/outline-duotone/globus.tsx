@@ -11,4 +11,5 @@ const OutlineDuotoneGlobus: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneGlobus };
 export default React.memo(OutlineDuotoneGlobus);

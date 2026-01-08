@@ -11,4 +11,5 @@ const OutlineDuotoneCallCancel: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneCallCancel };
 export default React.memo(OutlineDuotoneCallCancel);

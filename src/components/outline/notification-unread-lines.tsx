@@ -11,4 +11,5 @@ const OutlineNotificationUnreadLines: React.FC<IconProps> = ({ size = 24, color 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineNotificationUnreadLines };
 export default React.memo(OutlineNotificationUnreadLines);

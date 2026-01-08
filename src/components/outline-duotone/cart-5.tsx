@@ -11,4 +11,5 @@ const OutlineDuotoneCart5: React.FC<IconProps> = ({ size = 24, color = '#1C274C'
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneCart5 };
 export default React.memo(OutlineDuotoneCart5);

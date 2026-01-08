@@ -11,4 +11,5 @@ const BoldCartLargeMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldCartLargeMinimalistic };
 export default React.memo(BoldCartLargeMinimalistic);

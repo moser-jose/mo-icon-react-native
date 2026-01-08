@@ -11,4 +11,5 @@ const BoldDuotoneBatteryCharge: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneBatteryCharge };
 export default React.memo(BoldDuotoneBatteryCharge);

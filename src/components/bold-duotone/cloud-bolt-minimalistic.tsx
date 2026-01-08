@@ -11,4 +11,5 @@ const BoldDuotoneCloudBoltMinimalistic: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneCloudBoltMinimalistic };
 export default React.memo(BoldDuotoneCloudBoltMinimalistic);

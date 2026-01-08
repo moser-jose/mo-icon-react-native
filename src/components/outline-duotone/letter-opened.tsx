@@ -11,4 +11,5 @@ const OutlineDuotoneLetterOpened: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneLetterOpened };
 export default React.memo(OutlineDuotoneLetterOpened);

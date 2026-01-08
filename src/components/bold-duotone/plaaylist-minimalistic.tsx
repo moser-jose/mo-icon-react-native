@@ -11,4 +11,5 @@ const BoldDuotonePlaaylistMinimalistic: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotonePlaaylistMinimalistic };
 export default React.memo(BoldDuotonePlaaylistMinimalistic);

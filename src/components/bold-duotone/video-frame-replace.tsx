@@ -11,4 +11,5 @@ const BoldDuotoneVideoFrameReplace: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneVideoFrameReplace };
 export default React.memo(BoldDuotoneVideoFrameReplace);

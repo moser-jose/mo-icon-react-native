@@ -11,4 +11,5 @@ const BoldDuotoneWineglassTriangle: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneWineglassTriangle };
 export default React.memo(BoldDuotoneWineglassTriangle);

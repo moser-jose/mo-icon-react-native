@@ -11,4 +11,5 @@ const OutlineSmartphoneRotateOrientation: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineSmartphoneRotateOrientation };
 export default React.memo(OutlineSmartphoneRotateOrientation);

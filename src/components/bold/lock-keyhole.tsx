@@ -11,4 +11,5 @@ const BoldLockKeyhole: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldLockKeyhole };
 export default React.memo(BoldLockKeyhole);

@@ -11,4 +11,5 @@ const BoldPlayStream: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldPlayStream };
 export default React.memo(BoldPlayStream);

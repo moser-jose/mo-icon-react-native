@@ -11,4 +11,5 @@ const BrokenInboxArchive: React.FC<IconProps> = ({ size = 24, color = '#1C274C',
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenInboxArchive };
 export default React.memo(BrokenInboxArchive);

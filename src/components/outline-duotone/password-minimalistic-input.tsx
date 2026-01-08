@@ -11,4 +11,5 @@ const OutlineDuotonePasswordMinimalisticInput: React.FC<IconProps> = ({ size = 2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotonePasswordMinimalisticInput };
 export default React.memo(OutlineDuotonePasswordMinimalisticInput);

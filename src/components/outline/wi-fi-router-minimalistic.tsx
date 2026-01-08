@@ -11,4 +11,5 @@ const OutlineWiFiRouterMinimalistic: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineWiFiRouterMinimalistic };
 export default React.memo(OutlineWiFiRouterMinimalistic);

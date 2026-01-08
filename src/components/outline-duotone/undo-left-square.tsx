@@ -11,4 +11,5 @@ const OutlineDuotoneUndoLeftSquare: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneUndoLeftSquare };
 export default React.memo(OutlineDuotoneUndoLeftSquare);

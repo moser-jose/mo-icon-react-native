@@ -11,4 +11,5 @@ const OutlineWashingMachineMinimalistic: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineWashingMachineMinimalistic };
 export default React.memo(OutlineWashingMachineMinimalistic);

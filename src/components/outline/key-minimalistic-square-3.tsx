@@ -11,4 +11,5 @@ const OutlineKeyMinimalisticSquare3: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineKeyMinimalisticSquare3 };
 export default React.memo(OutlineKeyMinimalisticSquare3);

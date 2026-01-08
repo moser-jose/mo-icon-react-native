@@ -11,4 +11,5 @@ const BrokenSquareSortHorizontal: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenSquareSortHorizontal };
 export default React.memo(BrokenSquareSortHorizontal);

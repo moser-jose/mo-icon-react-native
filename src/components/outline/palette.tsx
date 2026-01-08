@@ -11,4 +11,5 @@ const OutlinePalette: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlinePalette };
 export default React.memo(OutlinePalette);

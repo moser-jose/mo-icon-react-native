@@ -11,4 +11,5 @@ const OutlineDuotoneMapArrowSquare: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMapArrowSquare };
 export default React.memo(OutlineDuotoneMapArrowSquare);

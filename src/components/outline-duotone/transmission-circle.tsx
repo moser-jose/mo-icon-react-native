@@ -11,4 +11,5 @@ const OutlineDuotoneTransmissionCircle: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneTransmissionCircle };
 export default React.memo(OutlineDuotoneTransmissionCircle);

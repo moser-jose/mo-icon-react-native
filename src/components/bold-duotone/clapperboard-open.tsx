@@ -11,4 +11,5 @@ const BoldDuotoneClapperboardOpen: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneClapperboardOpen };
 export default React.memo(BoldDuotoneClapperboardOpen);

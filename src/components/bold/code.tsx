@@ -11,4 +11,5 @@ const BoldCode: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldCode };
 export default React.memo(BoldCode);

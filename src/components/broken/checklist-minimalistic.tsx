@@ -11,4 +11,5 @@ const BrokenChecklistMinimalistic: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenChecklistMinimalistic };
 export default React.memo(BrokenChecklistMinimalistic);

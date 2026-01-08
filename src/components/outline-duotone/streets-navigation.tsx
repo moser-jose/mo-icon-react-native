@@ -11,4 +11,5 @@ const OutlineDuotoneStreetsNavigation: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneStreetsNavigation };
 export default React.memo(OutlineDuotoneStreetsNavigation);

@@ -11,4 +11,5 @@ const BoldMinimizeSquareMinimalistic: React.FC<IconProps> = ({ size = 24, color 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldMinimizeSquareMinimalistic };
 export default React.memo(BoldMinimizeSquareMinimalistic);

@@ -11,4 +11,5 @@ const BoldDuotoneSmartphoneUpdate: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneSmartphoneUpdate };
 export default React.memo(BoldDuotoneSmartphoneUpdate);

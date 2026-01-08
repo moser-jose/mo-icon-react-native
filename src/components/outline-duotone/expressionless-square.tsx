@@ -11,4 +11,5 @@ const OutlineDuotoneExpressionlessSquare: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneExpressionlessSquare };
 export default React.memo(OutlineDuotoneExpressionlessSquare);

@@ -11,4 +11,5 @@ const OutlineDuotoneRoundTransferVertical: React.FC<IconProps> = ({ size = 24, c
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneRoundTransferVertical };
 export default React.memo(OutlineDuotoneRoundTransferVertical);

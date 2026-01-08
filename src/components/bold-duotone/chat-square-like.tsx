@@ -11,4 +11,5 @@ const BoldDuotoneChatSquareLike: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneChatSquareLike };
 export default React.memo(BoldDuotoneChatSquareLike);

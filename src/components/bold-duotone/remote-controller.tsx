@@ -11,4 +11,5 @@ const BoldDuotoneRemoteController: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneRemoteController };
 export default React.memo(BoldDuotoneRemoteController);

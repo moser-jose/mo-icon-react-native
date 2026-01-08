@@ -11,4 +11,5 @@ const BoldDuotoneSquareForward: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneSquareForward };
 export default React.memo(BoldDuotoneSquareForward);

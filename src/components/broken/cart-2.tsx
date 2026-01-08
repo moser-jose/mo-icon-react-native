@@ -11,4 +11,5 @@ const BrokenCart2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenCart2 };
 export default React.memo(BrokenCart2);

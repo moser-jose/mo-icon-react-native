@@ -11,4 +11,5 @@ const OutlineDuotoneWirelessCharge: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneWirelessCharge };
 export default React.memo(OutlineDuotoneWirelessCharge);

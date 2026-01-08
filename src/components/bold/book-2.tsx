@@ -11,4 +11,5 @@ const BoldBook2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldBook2 };
 export default React.memo(BoldBook2);

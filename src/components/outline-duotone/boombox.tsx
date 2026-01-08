@@ -11,4 +11,5 @@ const OutlineDuotoneBoombox: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneBoombox };
 export default React.memo(OutlineDuotoneBoombox);

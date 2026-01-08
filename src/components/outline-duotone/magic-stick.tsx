@@ -11,4 +11,5 @@ const OutlineDuotoneMagicStick: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMagicStick };
 export default React.memo(OutlineDuotoneMagicStick);

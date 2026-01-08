@@ -26,9 +26,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate icons
-        run: npm run generate:icons
-
       - name: Lint
         run: npm run lint
 

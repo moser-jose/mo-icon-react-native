@@ -11,4 +11,5 @@ const OutlineDuotoneAirbudsCheck: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneAirbudsCheck };
 export default React.memo(OutlineDuotoneAirbudsCheck);

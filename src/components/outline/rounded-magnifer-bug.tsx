@@ -11,4 +11,5 @@ const OutlineRoundedMagniferBug: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineRoundedMagniferBug };
 export default React.memo(OutlineRoundedMagniferBug);

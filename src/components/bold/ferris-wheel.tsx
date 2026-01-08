@@ -11,4 +11,5 @@ const BoldFerrisWheel: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldFerrisWheel };
 export default React.memo(BoldFerrisWheel);

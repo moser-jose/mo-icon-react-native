@@ -11,4 +11,5 @@ const OutlineDuotoneArchiveMinimalistic: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneArchiveMinimalistic };
 export default React.memo(OutlineDuotoneArchiveMinimalistic);

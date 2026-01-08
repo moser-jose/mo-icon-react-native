@@ -11,4 +11,5 @@ const OutlineDuotoneSmileCircle: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneSmileCircle };
 export default React.memo(OutlineDuotoneSmileCircle);

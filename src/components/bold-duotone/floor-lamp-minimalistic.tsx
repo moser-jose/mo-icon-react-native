@@ -11,4 +11,5 @@ const BoldDuotoneFloorLampMinimalistic: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneFloorLampMinimalistic };
 export default React.memo(BoldDuotoneFloorLampMinimalistic);

@@ -11,4 +11,5 @@ const OutlineDuotoneBedsideTable: React.FC<IconProps> = ({ size = 24, color = '#
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneBedsideTable };
 export default React.memo(OutlineDuotoneBedsideTable);

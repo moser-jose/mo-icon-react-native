@@ -20,11 +20,15 @@ Icon library for React Native based on SVG, with support for multiple variants (
 npm install @mosmmy/mo-icon-react-native react-native-svg
 # or
 yarn add @mosmmy/mo-icon-react-native react-native-svg
+# or
+pnpm add @mosmmy/mo-icon-react-native react-native-svg
 ```
 
 > Note: `react` (>=17), `react-native` (>=0.71.0) and `react-native-svg` (>=13) are peerDependencies.
 
 ## Basic usage
+
+### Using the `Icon` component (Recommended)
 
 ```tsx
 import React from 'react';
@@ -41,6 +45,33 @@ export default function Example() {
 }
 ```
 
+### Using individual icon components
+
+You can also import and use individual icon components directly for better tree-shaking and type safety:
+
+```tsx
+import React from 'react';
+import { View } from 'react-native';
+import { BoldHome, OutlineHome, BoldBell } from '@mosmmy/mo-icon-react-native';
+
+export default function Example() {
+  return (
+    <View>
+      <BoldHome size={24} color="#333" />
+      <OutlineHome size={32} color="#E11D48" />
+      <BoldBell size={48} color="#10B981" />
+    </View>
+  );
+}
+```
+
+**Benefits of individual imports:**
+
+- Better tree-shaking (only imported icons are bundled)
+- Direct component access without registry lookup
+- Full TypeScript autocomplete support
+- Slightly better performance (no runtime component resolution)
+
 ### Available variants
 
 - bold --> (e.g., <img src="src/icons/bold/notifications/bell.svg" alt="bell bold icon" width="18">)
@@ -49,21 +80,20 @@ export default function Example() {
 - outline --> (e.g., <img src="src/icons/outline/notifications/bell.svg" alt="bell bold icon" width="18">)
 - outline-duotone --> (e.g., <img src="src/icons/outline-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
 
-### `Icon` props
+### `Icon` component props
 
 - `name` (string): icon name (see the generated list in [icon-names.json](/src/icon-names.json)).
 - `type` (optional): icon variant; default: `"outline"`.
 - `size` (optional): size in px; default: `24`.
 - `color` (optional): color (stroke/fill) in HEX; default: `#1C274C`.
 
-## Project structure
+### Individual icon component props
 
-- `src/icons/<variant>/...`: input SVGs (organize as you prefer; e.g., bell.svg`).
-- `src/icons/components/<variant>/...`: generated TSX components from the SVGs.
-- `src/registry.ts`: generated registry mapping `{ [variant]: { [name]: Component } }`.
-- `src/types/Icon.d.ts`: types generated from the discovered names.
-- `src/icon-names.json`: JSON with names grouped by variant.
-- `src/Icon.tsx`: `Icon` component that resolves and renders the corresponding component.
+When importing individual components (e.g., `BoldHome`, `OutlineBell`), they accept:
+
+- `size` (optional): size in px; default: `24`.
+- `color` (optional): color (stroke/fill) in HEX; default: `#1C274C`.
+- All other props from `react-native-svg`'s `SvgXml` component (except `width`, `height`, and `xml`).
 
 ## Generating icons from SVGs
 
@@ -76,21 +106,28 @@ export default function Example() {
 
 ```bash
 npm run generate:icons
+# or
+pnpm run generate:icons
 ```
 
 3. Run the tests to ensure everything is OK:
 
 ```bash
 npm run test
+# or
+pnpm test
 
 npm run test:ci #coverage
 ```
+
+> **Note:** The project uses `@testing-library/react-native` for testing. All icon components are fully tested and support both the `Icon` component and individual component imports.
 
 The script:
 
 - Optimizes SVGs via SVGO;
 - Generates TSX components that use `SvgXml` and accept `size` and `color`;
-- Updates `registry.ts`, `types.d.ts` and `icon-names.json` based on what was found in `icons/`.
+- Updates `registry.ts`, `types.d.ts` and `icon-names.json` based on what was found in `icons/`;
+- Generates `components-exports.ts` and `components-exports.js` with named exports for all individual icon components.
 
 ## Best practices and notes
 

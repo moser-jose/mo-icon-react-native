@@ -11,4 +11,5 @@ const OutlineDuotoneLightbulbMinimalistic: React.FC<IconProps> = ({ size = 24, c
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneLightbulbMinimalistic };
 export default React.memo(OutlineDuotoneLightbulbMinimalistic);

@@ -11,4 +11,5 @@ const OutlineMinimalisticMagniferZoomIn: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineMinimalisticMagniferZoomIn };
 export default React.memo(OutlineMinimalisticMagniferZoomIn);

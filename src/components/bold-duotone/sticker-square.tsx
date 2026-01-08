@@ -11,4 +11,5 @@ const BoldDuotoneStickerSquare: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneStickerSquare };
 export default React.memo(BoldDuotoneStickerSquare);

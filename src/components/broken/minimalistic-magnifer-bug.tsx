@@ -11,4 +11,5 @@ const BrokenMinimalisticMagniferBug: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenMinimalisticMagniferBug };
 export default React.memo(BrokenMinimalisticMagniferBug);

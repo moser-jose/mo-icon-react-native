@@ -11,4 +11,5 @@ const BrokenNotificationLinesRemove: React.FC<IconProps> = ({ size = 24, color =
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenNotificationLinesRemove };
 export default React.memo(BrokenNotificationLinesRemove);

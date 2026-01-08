@@ -11,4 +11,5 @@ const OutlineDuotoneDocumentMedicine: React.FC<IconProps> = ({ size = 24, color 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneDocumentMedicine };
 export default React.memo(OutlineDuotoneDocumentMedicine);

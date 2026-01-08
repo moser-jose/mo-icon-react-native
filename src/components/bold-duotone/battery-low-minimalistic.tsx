@@ -11,4 +11,5 @@ const BoldDuotoneBatteryLowMinimalistic: React.FC<IconProps> = ({ size = 24, col
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneBatteryLowMinimalistic };
 export default React.memo(BoldDuotoneBatteryLowMinimalistic);

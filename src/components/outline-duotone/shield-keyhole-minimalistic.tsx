@@ -11,4 +11,5 @@ const OutlineDuotoneShieldKeyholeMinimalistic: React.FC<IconProps> = ({ size = 2
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneShieldKeyholeMinimalistic };
 export default React.memo(OutlineDuotoneShieldKeyholeMinimalistic);

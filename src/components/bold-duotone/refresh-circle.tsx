@@ -11,4 +11,5 @@ const BoldDuotoneRefreshCircle: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneRefreshCircle };
 export default React.memo(BoldDuotoneRefreshCircle);

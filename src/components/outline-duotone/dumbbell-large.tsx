@@ -11,4 +11,5 @@ const OutlineDuotoneDumbbellLarge: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneDumbbellLarge };
 export default React.memo(OutlineDuotoneDumbbellLarge);

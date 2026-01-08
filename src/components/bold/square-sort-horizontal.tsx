@@ -11,4 +11,5 @@ const BoldSquareSortHorizontal: React.FC<IconProps> = ({ size = 24, color = '#1C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldSquareSortHorizontal };
 export default React.memo(BoldSquareSortHorizontal);

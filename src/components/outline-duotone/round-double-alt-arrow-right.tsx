@@ -11,4 +11,5 @@ const OutlineDuotoneRoundDoubleAltArrowRight: React.FC<IconProps> = ({ size = 24
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneRoundDoubleAltArrowRight };
 export default React.memo(OutlineDuotoneRoundDoubleAltArrowRight);

@@ -11,4 +11,5 @@ const BoldDuotoneLockKeyholeMinimalisticUnlocked: React.FC<IconProps> = ({ size 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneLockKeyholeMinimalisticUnlocked };
 export default React.memo(BoldDuotoneLockKeyholeMinimalisticUnlocked);

@@ -11,4 +11,5 @@ const BoldSmartphoneRotateOrientation: React.FC<IconProps> = ({ size = 24, color
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldSmartphoneRotateOrientation };
 export default React.memo(BoldSmartphoneRotateOrientation);

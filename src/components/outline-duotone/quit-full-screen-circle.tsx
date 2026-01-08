@@ -11,4 +11,5 @@ const OutlineDuotoneQuitFullScreenCircle: React.FC<IconProps> = ({ size = 24, co
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneQuitFullScreenCircle };
 export default React.memo(OutlineDuotoneQuitFullScreenCircle);

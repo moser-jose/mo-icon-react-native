@@ -11,4 +11,5 @@ const BoldDuotoneHeadphonesSquareSound: React.FC<IconProps> = ({ size = 24, colo
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneHeadphonesSquareSound };
 export default React.memo(BoldDuotoneHeadphonesSquareSound);

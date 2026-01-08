@@ -11,4 +11,5 @@ const BrokenGalleryFavourite: React.FC<IconProps> = ({ size = 24, color = '#1C27
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenGalleryFavourite };
 export default React.memo(BrokenGalleryFavourite);

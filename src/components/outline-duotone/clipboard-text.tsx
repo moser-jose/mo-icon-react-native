@@ -11,4 +11,5 @@ const OutlineDuotoneClipboardText: React.FC<IconProps> = ({ size = 24, color = '
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneClipboardText };
 export default React.memo(OutlineDuotoneClipboardText);

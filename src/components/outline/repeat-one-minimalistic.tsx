@@ -11,4 +11,5 @@ const OutlineRepeatOneMinimalistic: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineRepeatOneMinimalistic };
 export default React.memo(OutlineRepeatOneMinimalistic);

@@ -11,4 +11,5 @@ const OutlineRoundedMagniferZoomIn: React.FC<IconProps> = ({ size = 24, color = 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineRoundedMagniferZoomIn };
 export default React.memo(OutlineRoundedMagniferZoomIn);

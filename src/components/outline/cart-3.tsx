@@ -11,4 +11,5 @@ const OutlineCart3: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineCart3 };
 export default React.memo(OutlineCart3);

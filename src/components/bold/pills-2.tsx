@@ -11,4 +11,5 @@ const BoldPills2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...prop
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldPills2 };
 export default React.memo(BoldPills2);

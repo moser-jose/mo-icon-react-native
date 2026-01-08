@@ -11,4 +11,5 @@ const BrokenSquareAltArrowRight: React.FC<IconProps> = ({ size = 24, color = '#1
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenSquareAltArrowRight };
 export default React.memo(BrokenSquareAltArrowRight);
