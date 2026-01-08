@@ -6,7 +6,11 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const BrokenLockKeyholeMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const BrokenLockKeyholeMinimalistic: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M12 14v4m-6-8V8q0-.511.083-1M18 10V8A6 6 0 0 0 7.5 4.031"/><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M11 22H8c-2.828 0-4.243 0-5.121-.879C2 20.243 2 18.828 2 16s0-4.243.879-5.121C3.757 10 5.172 10 8 10h8c2.828 0 4.243 0 5.121.879C22 11.757 22 13.172 22 16s0 4.243-.879 5.121C20.243 22 18.828 22 16 22h-1"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };

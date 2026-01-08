@@ -6,7 +6,11 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const BrokenConfoundedCircle: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const BrokenConfoundedCircle: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path stroke="${color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8 12 2-1.5L8 9m8 3-2-1.5L16 9m-1 7-1-1-1 1-1-1-1 1-1-1-1 1"/><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };

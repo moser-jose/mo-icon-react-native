@@ -6,7 +6,11 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const BrokenRoundArrowLeftUp: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const BrokenRoundArrowLeftUp: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/><path stroke="${color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 15 9 9m0 0h4.5M9 9v4.5"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
