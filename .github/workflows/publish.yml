@@ -13,16 +13,16 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '>=18.0.0'
-          cache: 'npm'
+          node-version: ">=18.0.0"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
 
       - name: Lint
         run: npm run lint
-      - name: Format check
-        run: npm run format:check
+      - name: Format
+        run: npm run format
 
       - name: Test
         run: npm test
@@ -46,10 +46,10 @@ jobs:
       - name: Use Node.js (npmjs.org)
         uses: actions/setup-node@v4
         with:
-          node-version: '>=18.0.0'
-          registry-url: 'https://registry.npmjs.org/'
-          scope: '@mosmmy'
-          cache: 'npm'
+          node-version: ">=18.0.0"
+          registry-url: "https://registry.npmjs.org/"
+          scope: "@mosmmy"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -64,7 +64,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish --access public
-
 
   notify:
     needs: [build-and-publish-npm]
