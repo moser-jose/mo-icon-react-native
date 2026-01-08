@@ -95,14 +95,56 @@ describe('components-exports.ts file generation', () => {
         expect(content).toContain('module.exports');
       } else {
         // Check for valid export statements
-        const exportLines = content
-          .split('\n')
-          .filter((line) => line.trim().startsWith('exports.'));
+        // Handle multi-line exports by reconstructing complete statements
+        const lines = content.split('\n');
+        const exportStatements: string[] = [];
 
-        if (exportLines.length > 0) {
-          // Each export line should match the pattern: exports.ComponentName = require('path').ComponentName;
-          exportLines.forEach((line) => {
-            expect(line).toMatch(/exports\.\w+\s*=\s*require\(['"].*['"]\)\.\w+;?/);
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
+          const trimmedLine = line.trim();
+
+          if (trimmedLine.startsWith('exports.')) {
+            let exportStatement = trimmedLine;
+
+            // If this line doesn't end with a semicolon, it's a multi-line export
+            // Continue reading lines until we find the semicolon
+            if (!trimmedLine.endsWith(';')) {
+              let j = i + 1;
+              let foundNextPart = false;
+              while (j < lines.length && !exportStatement.endsWith(';')) {
+                const nextLine = lines[j].trim();
+                if (nextLine.length > 0) {
+                  exportStatement += ' ' + nextLine;
+                  foundNextPart = true;
+                  // Stop if we've found the semicolon
+                  if (nextLine.endsWith(';')) {
+                    break;
+                  }
+                } else if (foundNextPart) {
+                  // If we already found a continuation but hit an empty line, break
+                  break;
+                }
+                j++;
+                // Safety check to avoid infinite loops
+                if (j > i + 10) {
+                  break;
+                }
+              }
+            }
+
+            // Only push if we have a complete statement (ends with semicolon)
+            if (exportStatement.endsWith(';')) {
+              exportStatements.push(exportStatement);
+            }
+          }
+        }
+
+        if (exportStatements.length > 0) {
+          // Each export statement should match the pattern: exports.ComponentName = require('path').ComponentName;
+          exportStatements.forEach((statement) => {
+            // Remove extra whitespace and normalize the statement
+            const normalized = statement.replace(/\s+/g, ' ').trim();
+            expect(normalized).toMatch(/exports\.\w+\s*=\s*require\(['"].*['"]\)\.\w+;?/);
           });
         }
       }
@@ -148,14 +190,18 @@ describe('components-exports.ts file generation', () => {
           .filter((name): name is string => name !== null);
 
         // Extract component names from JS file
-        const jsExports = jsContent
-          .split('\n')
-          .filter((line) => line.trim().startsWith('exports.'))
-          .map((line) => {
-            const match = line.match(/exports\.(\w+)\s*=/);
-            return match ? match[1] : null;
-          })
-          .filter((name): name is string => name !== null);
+        // Handle multi-line exports by checking the first line of each export
+        const jsLines = jsContent.split('\n');
+        const jsExports: string[] = [];
+        for (const line of jsLines) {
+          const trimmedLine = line.trim();
+          if (trimmedLine.startsWith('exports.')) {
+            const match = trimmedLine.match(/exports\.(\w+)\s*[=;]/);
+            if (match) {
+              jsExports.push(match[1]);
+            }
+          }
+        }
 
         // Should have the same number of exports
         expect(tsExports.length).toBe(jsExports.length);
