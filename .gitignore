@@ -6,7 +6,6 @@ yarn-error.log*
 pnpm-debug.log*
 .pnpm-debug.log*
 pnpm-lock.yaml
-yarn.lock
 .npmignore
 .npmrcssxcxc
 
