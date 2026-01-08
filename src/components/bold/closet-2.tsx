@@ -11,4 +11,5 @@ const BoldCloset2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldCloset2 };
 export default React.memo(BoldCloset2);

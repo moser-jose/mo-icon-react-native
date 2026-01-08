@@ -6,9 +6,14 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const OutlineDuotoneRefreshSquare: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const OutlineDuotoneRefreshSquare: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M7.378 11.63h-.75zm0 .926-.562.497a.75.75 0 0 0 1.08.044zm2.141-1.015a.75.75 0 0 0-1.038-1.082zm-2.957-1.038a.75.75 0 1 0-1.123.994zm8.37-1.494a.75.75 0 0 0 1.1-1.018zM12.044 6.25c-2.986 0-5.416 2.403-5.416 5.38h1.5c0-2.137 1.747-3.88 3.916-3.88zm-5.416 5.38v.926h1.5v-.926zm1.269 1.467 1.622-1.556-1.038-1.082-1.622 1.555zm.042-1.039-1.377-1.555-1.123.994 1.377 1.556zm8.094-4.067a5.42 5.42 0 0 0-3.99-1.741v1.5a3.92 3.92 0 0 1 2.889 1.26zm.586 3.454.56-.498a.75.75 0 0 0-1.08-.043zM14.48 12.46a.75.75 0 1 0 1.04 1.082zm2.96 1.04a.75.75 0 1 0 1.12-.997zm-8.393 1.507a.75.75 0 0 0-1.094 1.026zm2.888 2.745c2.993 0 5.434-2.4 5.434-5.38h-1.5c0 2.135-1.753 3.88-3.934 3.88zm5.434-5.38v-.926h-1.5v.926zm-1.27-1.467L14.48 12.46l1.04 1.082 1.618-1.555zm-.04 1.04 1.38 1.554 1.122-.996-1.381-1.555zm-8.106 4.088a5.45 5.45 0 0 0 3.982 1.719v-1.5c-1.143 0-2.17-.48-2.888-1.245z"/><path stroke="${color}" stroke-width="1.5" d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z" opacity=".5"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneRefreshSquare };
 export default React.memo(OutlineDuotoneRefreshSquare);

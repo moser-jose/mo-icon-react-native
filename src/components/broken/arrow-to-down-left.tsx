@@ -11,4 +11,5 @@ const BrokenArrowToDownLeft: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenArrowToDownLeft };
 export default React.memo(BrokenArrowToDownLeft);

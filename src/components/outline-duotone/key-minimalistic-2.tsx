@@ -6,9 +6,14 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const OutlineDuotoneKeyMinimalistic2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const OutlineDuotoneKeyMinimalistic2: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><circle cx="15" cy="9" r="7" stroke="${color}" stroke-width="1.5"/><circle cx="15" cy="9" r="2" stroke="${color}" stroke-width="1.5" opacity=".5"/><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="m3.5 20.5 6-6M6 21l-1.5-1.5m2-2L8 19"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneKeyMinimalistic2 };
 export default React.memo(OutlineDuotoneKeyMinimalistic2);

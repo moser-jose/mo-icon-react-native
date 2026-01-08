@@ -11,4 +11,5 @@ const BoldAirbudsCaseOpen: React.FC<IconProps> = ({ size = 24, color = '#1C274C'
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldAirbudsCaseOpen };
 export default React.memo(BoldAirbudsCaseOpen);

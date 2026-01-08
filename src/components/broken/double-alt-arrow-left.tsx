@@ -6,9 +6,14 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const BrokenDoubleAltArrowLeft: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const BrokenDoubleAltArrowLeft: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path stroke="${color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m13 19-6-7 1.5-1.75M13 5l-2 2.333M17 5l-6 7 1.5 1.75M17 19l-2-2.333"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenDoubleAltArrowLeft };
 export default React.memo(BrokenDoubleAltArrowLeft);

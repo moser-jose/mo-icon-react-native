@@ -11,4 +11,5 @@ const BrokenPlayStream: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenPlayStream };
 export default React.memo(BrokenPlayStream);

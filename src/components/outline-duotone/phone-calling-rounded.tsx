@@ -6,9 +6,14 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const OutlineDuotonePhoneCallingRounded: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const OutlineDuotonePhoneCallingRounded: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="M14 2s2.2.2 5 3 3 5 3 5m-7.793-4.465s.99.283 2.475 1.768 1.768 2.475 1.768 2.475"/><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="m10.038 5.316.649 1.163c.585 1.05.35 2.426-.572 3.349 0 0-1.12 1.119.91 3.148 2.028 2.028 3.147.91 3.147.91.923-.923 2.3-1.158 3.349-.573l1.163.65c1.585.884 1.772 3.106.379 4.5-.837.836-1.863 1.488-2.996 1.53-1.908.073-5.149-.41-8.4-3.66-3.25-3.251-3.733-6.492-3.66-8.4.043-1.133.694-2.159 1.53-2.996 1.394-1.393 3.616-1.206 4.5.38Z" opacity=".5"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotonePhoneCallingRounded };
 export default React.memo(OutlineDuotonePhoneCallingRounded);

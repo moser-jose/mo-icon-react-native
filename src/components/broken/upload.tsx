@@ -11,4 +11,5 @@ const BrokenUpload: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenUpload };
 export default React.memo(BrokenUpload);

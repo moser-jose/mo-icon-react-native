@@ -11,4 +11,5 @@ const OutlineFacemaskSquare: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineFacemaskSquare };
 export default React.memo(OutlineFacemaskSquare);

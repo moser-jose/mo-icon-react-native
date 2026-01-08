@@ -11,4 +11,5 @@ const BrokenInboxLine: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenInboxLine };
 export default React.memo(BrokenInboxLine);

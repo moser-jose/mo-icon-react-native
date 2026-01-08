@@ -11,4 +11,5 @@ const BoldDuotonePlayCircle: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotonePlayCircle };
 export default React.memo(BoldDuotonePlayCircle);

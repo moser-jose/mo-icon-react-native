@@ -11,4 +11,5 @@ const BoldCloundCross: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldCloundCross };
 export default React.memo(BoldCloundCross);

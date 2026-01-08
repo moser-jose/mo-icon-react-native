@@ -11,4 +11,5 @@ const BoldMoon: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldMoon };
 export default React.memo(BoldMoon);

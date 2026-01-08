@@ -11,4 +11,5 @@ const OutlineDuotoneTuning3: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneTuning3 };
 export default React.memo(OutlineDuotoneTuning3);

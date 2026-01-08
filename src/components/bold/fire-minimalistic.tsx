@@ -11,4 +11,5 @@ const BoldFireMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldFireMinimalistic };
 export default React.memo(BoldFireMinimalistic);

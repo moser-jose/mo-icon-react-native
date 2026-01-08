@@ -11,4 +11,5 @@ const BoldCropMinimalistic: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldCropMinimalistic };
 export default React.memo(BoldCropMinimalistic);

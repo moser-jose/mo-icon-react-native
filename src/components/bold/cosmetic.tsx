@@ -11,4 +11,5 @@ const BoldCosmetic: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldCosmetic };
 export default React.memo(BoldCosmetic);

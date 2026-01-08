@@ -11,4 +11,5 @@ const OutlineMusicNote4: React.FC<IconProps> = ({ size = 24, color = '#1C274C', 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineMusicNote4 };
 export default React.memo(OutlineMusicNote4);

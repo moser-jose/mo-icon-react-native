@@ -5,8 +5,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 .pnpm-debug.log*
-pnpm-lock.yaml
-yarn.lock
 .npmignore
 .npmrcssxcxc
 
@@ -30,22 +28,6 @@ expo/
 # Tests / Coverage
 coverage/
 
-# React Native specific
-*.iml
-*.hprof
-*.log
-/buck-out/
-/.buckconfig.local
-/.buckd/
-/.gradle/
-**/android/app/build/
-**/ios/Pods/
-
-# Generated icon files (can be re-created)
-src/icons/svg/
-src/registry.ts
-src/types.ts
-src/icon-names.json
 
 
 .npmrc

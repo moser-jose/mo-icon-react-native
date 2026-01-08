@@ -11,4 +11,5 @@ const OutlinePlugCircle: React.FC<IconProps> = ({ size = 24, color = '#1C274C', 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlinePlugCircle };
 export default React.memo(OutlinePlugCircle);

@@ -11,4 +11,5 @@ const BoldDiagramDown: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDiagramDown };
 export default React.memo(BoldDiagramDown);

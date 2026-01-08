@@ -11,4 +11,5 @@ const OutlineDuotoneChart2: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneChart2 };
 export default React.memo(OutlineDuotoneChart2);

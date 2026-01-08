@@ -11,4 +11,5 @@ const BrokenMaximizeSquare3: React.FC<IconProps> = ({ size = 24, color = '#1C274
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenMaximizeSquare3 };
 export default React.memo(BrokenMaximizeSquare3);

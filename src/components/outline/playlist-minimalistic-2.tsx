@@ -6,9 +6,14 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const OutlinePlaylistMinimalistic2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const OutlinePlaylistMinimalistic2: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" fill-rule="evenodd" d="M2.25 6A.75.75 0 0 1 3 5.25h12a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 2.25 6M17 7.25a.75.75 0 0 1 .75.75A3.25 3.25 0 0 0 21 11.25a.75.75 0 0 1 0 1.5c-1.257 0-2.4-.488-3.25-1.286V16.5a3.25 3.25 0 1 1-1.5-2.74V8a.75.75 0 0 1 .75-.75m-.75 9.25a1.75 1.75 0 1 0-3.5 0 1.75 1.75 0 0 0 3.5 0m-14-6.5A.75.75 0 0 1 3 9.25h10a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlinePlaylistMinimalistic2 };
 export default React.memo(OutlinePlaylistMinimalistic2);

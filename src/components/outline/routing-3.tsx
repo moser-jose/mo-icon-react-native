@@ -11,4 +11,5 @@ const OutlineRouting3: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineRouting3 };
 export default React.memo(OutlineRouting3);

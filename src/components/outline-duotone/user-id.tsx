@@ -11,4 +11,5 @@ const OutlineDuotoneUserId: React.FC<IconProps> = ({ size = 24, color = '#1C274C
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneUserId };
 export default React.memo(OutlineDuotoneUserId);

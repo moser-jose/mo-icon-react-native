@@ -11,4 +11,5 @@ const BoldDangerCircle: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDangerCircle };
 export default React.memo(BoldDangerCircle);

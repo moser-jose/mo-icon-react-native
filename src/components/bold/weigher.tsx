@@ -11,4 +11,5 @@ const BoldWeigher: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldWeigher };
 export default React.memo(BoldWeigher);

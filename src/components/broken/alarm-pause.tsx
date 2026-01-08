@@ -11,4 +11,5 @@ const BrokenAlarmPause: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenAlarmPause };
 export default React.memo(BrokenAlarmPause);

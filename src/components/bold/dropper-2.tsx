@@ -11,4 +11,5 @@ const BoldDropper2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDropper2 };
 export default React.memo(BoldDropper2);

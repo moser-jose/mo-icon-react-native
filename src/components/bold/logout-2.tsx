@@ -11,4 +11,5 @@ const BoldLogout2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldLogout2 };
 export default React.memo(BoldLogout2);

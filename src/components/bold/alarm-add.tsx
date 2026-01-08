@@ -11,4 +11,5 @@ const BoldAlarmAdd: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldAlarmAdd };
 export default React.memo(BoldAlarmAdd);

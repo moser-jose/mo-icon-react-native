@@ -11,4 +11,5 @@ const BoldRoundArrowUp: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldRoundArrowUp };
 export default React.memo(BoldRoundArrowUp);

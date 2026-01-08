@@ -11,4 +11,5 @@ const OutlinePlate: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pr
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlinePlate };
 export default React.memo(OutlinePlate);

@@ -11,4 +11,5 @@ const BoldDuotoneCode2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneCode2 };
 export default React.memo(BoldDuotoneCode2);

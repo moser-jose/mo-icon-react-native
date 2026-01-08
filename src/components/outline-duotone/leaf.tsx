@@ -11,4 +11,5 @@ const OutlineDuotoneLeaf: React.FC<IconProps> = ({ size = 24, color = '#1C274C',
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneLeaf };
 export default React.memo(OutlineDuotoneLeaf);

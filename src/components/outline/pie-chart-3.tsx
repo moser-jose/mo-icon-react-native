@@ -11,4 +11,5 @@ const OutlinePieChart3: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlinePieChart3 };
 export default React.memo(OutlinePieChart3);

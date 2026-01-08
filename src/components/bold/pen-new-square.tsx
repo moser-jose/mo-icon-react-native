@@ -11,4 +11,5 @@ const BoldPenNewSquare: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldPenNewSquare };
 export default React.memo(BoldPenNewSquare);

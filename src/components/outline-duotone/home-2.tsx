@@ -11,4 +11,5 @@ const OutlineDuotoneHome2: React.FC<IconProps> = ({ size = 24, color = '#1C274C'
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneHome2 };
 export default React.memo(OutlineDuotoneHome2);

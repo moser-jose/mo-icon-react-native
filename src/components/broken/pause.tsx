@@ -11,4 +11,5 @@ const BrokenPause: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenPause };
 export default React.memo(BrokenPause);

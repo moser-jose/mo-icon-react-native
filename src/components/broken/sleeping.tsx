@@ -11,4 +11,5 @@ const BrokenSleeping: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenSleeping };
 export default React.memo(BrokenSleeping);

@@ -11,4 +11,5 @@ const BrokenScreenShare: React.FC<IconProps> = ({ size = 24, color = '#1C274C', 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenScreenShare };
 export default React.memo(BrokenScreenShare);

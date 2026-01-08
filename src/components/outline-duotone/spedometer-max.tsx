@@ -6,9 +6,14 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const OutlineDuotoneSpedometerMax: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const OutlineDuotoneSpedometerMax: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path stroke="${color}" stroke-width="1.5" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10Z"/><path stroke="${color}" stroke-linecap="round" stroke-width="1.5" d="m19 19-1.5-1.5M19 5l-1.5 1.5M5 19l1.5-1.5M5 5l1.5 1.5M2 12h2m16 0h2M12 4V2" opacity=".5"/><path stroke="${color}" stroke-width="1.5" d="M10.121 14.364a3 3 0 1 1 4.243-4.243c.446.445.757 1.37.971 2.346.321 1.458.482 2.188-.099 2.769-.58.58-1.31.42-2.769.099-.975-.215-1.9-.526-2.346-.972Z"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneSpedometerMax };
 export default React.memo(OutlineDuotoneSpedometerMax);

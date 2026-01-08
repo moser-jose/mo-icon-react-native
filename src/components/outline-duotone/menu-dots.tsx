@@ -6,9 +6,14 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const OutlineDuotoneMenuDots: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
+const OutlineDuotoneMenuDots: React.FC<IconProps> = ({
+  size = 24,
+  color = '#1C274C',
+  ...props
+}) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2" stroke="${color}" stroke-width="1.5"/><circle cx="12" cy="12" r="2" stroke="${color}" stroke-width="1.5" opacity=".5"/><circle cx="19" cy="12" r="2" stroke="${color}" stroke-width="1.5"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlineDuotoneMenuDots };
 export default React.memo(OutlineDuotoneMenuDots);

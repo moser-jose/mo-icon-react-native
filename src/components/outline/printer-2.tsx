@@ -11,4 +11,5 @@ const OutlinePrinter2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ..
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { OutlinePrinter2 };
 export default React.memo(OutlinePrinter2);

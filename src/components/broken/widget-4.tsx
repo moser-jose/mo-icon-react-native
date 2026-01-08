@@ -11,4 +11,5 @@ const BrokenWidget4: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...p
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenWidget4 };
 export default React.memo(BrokenWidget4);

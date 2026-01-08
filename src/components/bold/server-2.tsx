@@ -11,4 +11,5 @@ const BoldServer2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...pro
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldServer2 };
 export default React.memo(BoldServer2);

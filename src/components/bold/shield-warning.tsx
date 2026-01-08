@@ -11,4 +11,5 @@ const BoldShieldWarning: React.FC<IconProps> = ({ size = 24, color = '#1C274C', 
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldShieldWarning };
 export default React.memo(BoldShieldWarning);

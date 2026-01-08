@@ -11,4 +11,5 @@ const BoldDuotoneRefresh: React.FC<IconProps> = ({ size = 24, color = '#1C274C',
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BoldDuotoneRefresh };
 export default React.memo(BoldDuotoneRefresh);

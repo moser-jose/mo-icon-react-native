@@ -11,4 +11,5 @@ const BrokenMusicNote2: React.FC<IconProps> = ({ size = 24, color = '#1C274C', .
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };
 
+export { BrokenMusicNote2 };
 export default React.memo(BrokenMusicNote2);
