@@ -47,12 +47,38 @@ export default function Example() {
 
 ### Using individual icon components
 
-You can also import and use individual icon components directly for better tree-shaking and type safety:
+You can import and use individual icon components directly for better tree-shaking and type safety. There are three ways to import individual components:
+
+#### Option 1: Direct import from component files (Recommended)
+
+Import directly from the component file path for optimal tree-shaking:
 
 ```tsx
 import React from 'react';
 import { View } from 'react-native';
-import { BoldHome, OutlineHome, BoldBell } from '@mosmmy/mo-icon-react-native';
+import { BoldHome } from '@mosmmy/mo-icon-react-native/src/components/bold/home';
+import { OutlineHome } from '@mosmmy/mo-icon-react-native/src/components/outline/home';
+import { BoldBell } from '@mosmmy/mo-icon-react-native/src/components/bold/bell';
+
+export default function Example() {
+  return (
+    <View>
+      <BoldHome size={24} color="#333" />
+      <OutlineHome size={32} color="#E11D48" />
+      <BoldBell size={48} color="#10B981" />
+    </View>
+  );
+}
+```
+
+#### Option 2: Import from components-exports
+
+If you need multiple components, you can import them from the components-exports file:
+
+```tsx
+import React from 'react';
+import { View } from 'react-native';
+import { BoldHome, OutlineHome, BoldBell } from '@mosmmy/mo-icon-react-native/components-exports';
 
 export default function Example() {
   return (

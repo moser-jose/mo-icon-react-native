@@ -1,9 +1,9 @@
 {
   "name": "@mosmmy/mo-icon-react-native",
-  "version": "1.0.9",
-  "main": "./src/index.js",
-  "react-native": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "version": "1.1.0",
+  "main": "./index.js",
+  "react-native": "./index.js",
+  "types": "./index.d.ts",
   "author": "Moser José",
   "repository": {
     "type": "git",
@@ -22,10 +22,10 @@
     "mo"
   ],
   "files": [
-    "src/index.js",
+    "index.js",
     "src/Icon.tsx",
-    "src/index.ts",
-    "src/index.d.ts",
+    "index.ts",
+    "index.d.ts",
     "src/registry.ts",
     "src/types/Icon.d.ts",
     "src/components-exports.ts",
@@ -37,9 +37,14 @@
   ],
   "exports": {
     ".": {
-      "react-native": "./src/index.js",
-      "default": "./src/index.js",
-      "types": "./src/index.d.ts"
+      "react-native": "./index.js",
+      "default": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./components-exports": {
+      "react-native": "./src/components-exports.js",
+      "default": "./src/components-exports.js",
+      "types": "./src/components-exports.ts"
     }
   },
   "scripts": {

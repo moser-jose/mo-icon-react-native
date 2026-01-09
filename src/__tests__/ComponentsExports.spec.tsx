@@ -9,20 +9,17 @@ jest.mock('react-native-svg', () => ({
 }));
 
 describe('Individual Component Exports', () => {
-  // Test that components can be imported directly from the main index
-  it('should export individual components from main index', () => {
-    // Dynamic import to handle cases where components-exports might not exist yet
-    const indexModule = require('..');
+  // Test that main exports (Icon, iconRegistry) are available from main index
+  it('should export Icon and iconRegistry from main index', () => {
+    const indexModule = require('../../index');
 
     // Check that Icon and iconRegistry are still exported
     expect(indexModule.Icon).toBeDefined();
     expect(indexModule.iconRegistry).toBeDefined();
 
-    // If components-exports exists, check that some components are exported
-    // We'll test with a component that should exist if the script has been run
-    if (indexModule.BoldHome) {
-      expect(typeof indexModule.BoldHome).toBe('function');
-    }
+    // Components are NOT exported by default from main index (for tree-shaking)
+    // They should be imported from components-exports or directly from component files
+    expect(indexModule.BoldHome).toBeUndefined();
   });
 
   it('should be able to import components-exports directly', () => {
@@ -37,10 +34,10 @@ describe('Individual Component Exports', () => {
     }
   });
 
-  // Test individual component rendering if available
-  it('should render BoldHome component with default props', () => {
+  // Test individual component rendering from components-exports
+  it('should render BoldHome component with default props from components-exports', () => {
     try {
-      const { BoldHome } = require('..');
+      const { BoldHome } = require('../components-exports');
       if (BoldHome) {
         const { getByTestId } = render(<BoldHome testID="bold-home-test" />);
         expect(getByTestId('bold-home-test')).toBeTruthy();
@@ -51,9 +48,9 @@ describe('Individual Component Exports', () => {
     }
   });
 
-  it('should render BoldHome component with custom props', () => {
+  it('should render BoldHome component with custom props from components-exports', () => {
     try {
-      const { BoldHome } = require('..');
+      const { BoldHome } = require('../components-exports');
       if (BoldHome) {
         const { getByTestId } = render(
           <BoldHome size={32} color="#FF0000" testID="bold-home-custom" />,
@@ -69,9 +66,9 @@ describe('Individual Component Exports', () => {
     }
   });
 
-  it('should render OutlineHome component if available', () => {
+  it('should render OutlineHome component from components-exports if available', () => {
     try {
-      const { OutlineHome } = require('..');
+      const { OutlineHome } = require('../components-exports');
       if (OutlineHome) {
         const { getByTestId } = render(
           <OutlineHome size={48} color="#00FF00" testID="outline-home-test" />,
@@ -87,9 +84,9 @@ describe('Individual Component Exports', () => {
     }
   });
 
-  it('should handle multiple component imports', () => {
+  it('should handle multiple component imports from components-exports', () => {
     try {
-      const { BoldHome, OutlineHome } = require('..');
+      const { BoldHome, OutlineHome } = require('../components-exports');
       if (BoldHome && OutlineHome) {
         expect(typeof BoldHome).toBe('function');
         expect(typeof OutlineHome).toBe('function');
@@ -106,9 +103,9 @@ describe('Individual Component Exports', () => {
     }
   });
 
-  it('should export components with correct prop types', () => {
+  it('should export components with correct prop types from components-exports', () => {
     try {
-      const { BoldHome } = require('..');
+      const { BoldHome } = require('../components-exports');
       if (BoldHome) {
         // Test that component accepts size and color props
         const { getByTestId } = render(
@@ -122,9 +119,9 @@ describe('Individual Component Exports', () => {
     }
   });
 
-  it('should render components with different sizes', () => {
+  it('should render components with different sizes from components-exports', () => {
     try {
-      const { BoldHome } = require('..');
+      const { BoldHome } = require('../components-exports');
       if (BoldHome) {
         const { getByTestId: getSmall } = render(<BoldHome size={16} testID="small-icon" />);
         const { getByTestId: getMedium } = render(<BoldHome size={24} testID="medium-icon" />);
@@ -140,9 +137,9 @@ describe('Individual Component Exports', () => {
     }
   });
 
-  it('should render components with different colors', () => {
+  it('should render components with different colors from components-exports', () => {
     try {
-      const { BoldHome } = require('..');
+      const { BoldHome } = require('../components-exports');
       if (BoldHome) {
         const { getByTestId: getRed } = render(<BoldHome color="#FF0000" testID="red-icon" />);
         const { getByTestId: getBlue } = render(<BoldHome color="#0000FF" testID="blue-icon" />);
