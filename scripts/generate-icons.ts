@@ -365,7 +365,7 @@ function main(): void {
   writeTypes(namesByVariant);
   writeRegistry(registryEntries, variants);
   writeComponentsExports(registryEntries);
-  const namesFile = path.resolve(ROOT_DIR, 'src', 'icon-names.json');
+  const namesFile = path.resolve(ROOT_DIR, '.', 'icon-names.json');
   ensureDir(path.dirname(namesFile));
   fs.writeFileSync(namesFile, JSON.stringify(namesByVariant, null, 2), 'utf8');
 

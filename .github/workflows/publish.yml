@@ -4,6 +4,10 @@ on:
   release:
     types: [created]
 
+# Needed so GITHUB_TOKEN can update the Release body
+permissions:
+  contents: write
+
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -13,7 +17,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ">=18.0.0"
+          node-version: ">=18.x"
           cache: "npm"
 
       - name: Install dependencies
@@ -21,16 +25,17 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
       - name: Format
         run: npm run format
 
       - name: Test
-        run: npm test
+        run: npm run test
 
       - name: Check package version
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
-          TAG_VERSION=${{ github.event.release.tag_name }}
+          TAG_VERSION="${{ github.event.release.tag_name }}"
           if [ "$PACKAGE_VERSION" != "$TAG_VERSION" ]; then
             echo "::error::Package version ($PACKAGE_VERSION) does not match tag version ($TAG_VERSION)"
             exit 1
@@ -46,7 +51,7 @@ jobs:
       - name: Use Node.js (npmjs.org)
         uses: actions/setup-node@v4
         with:
-          node-version: ">=18.0.0"
+          node-version: ">=18.x"
           registry-url: "https://registry.npmjs.org/"
           scope: "@mosmmy"
           cache: "npm"
@@ -72,6 +77,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Get package info
         id: package
@@ -79,10 +86,73 @@ jobs:
           echo "name=$(node -p "require('./package.json').name")" >> $GITHUB_OUTPUT
           echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
 
+      - name: Generate changelog
+        id: changelog
+        run: |
+          CURRENT_TAG="${{ github.event.release.tag_name }}"
+
+          # Get previous tag (skip current tag)
+          PREVIOUS_TAG=$(git tag --sort=-v:refname | sed -n '2p')
+
+          if [ -z "$PREVIOUS_TAG" ]; then
+            CHANGELOG=$(git log --pretty=format:"- %s (%h)" --no-merges)
+          else
+            CHANGELOG=$(git log "${PREVIOUS_TAG}..${CURRENT_TAG}" --pretty=format:"- %s (%h)" --no-merges)
+          fi
+
+          if [ -z "$CHANGELOG" ]; then
+            CHANGELOG="Nenhuma mudança registrada."
+          fi
+
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Set publish date
+        run: |
+          echo "PUBLISH_DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
+      - name: Update GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGE_NAME: ${{ steps.package.outputs.name }}
+          PACKAGE_VERSION: ${{ steps.package.outputs.version }}
+          CHANGELOG: ${{ steps.changelog.outputs.changelog }}
+          PUBLISH_DATE: ${{ env.PUBLISH_DATE }}
+        run: |
+          RELEASE_ID="${{ github.event.release.id }}"
+
+          # Generate release body JSON using Node.js inline
+          RELEASE_BODY_JSON=$(node -e "
+            const packageName = process.env.PACKAGE_NAME;
+            const packageVersion = process.env.PACKAGE_VERSION;
+            const publishDate = process.env.PUBLISH_DATE;
+            const changelog = process.env.CHANGELOG || 'Nenhuma mudança registrada.';
+            const body =
+              '## 📦 Publicação no npm\\n\\n' +
+              '**Pacote:** ' + packageName + '\\n' +
+              '**Versão:** ' + packageVersion + '\\n' +
+              '**Publicado em:** npm\\n' +
+              '**Data:** ' + publishDate + '\\n\\n' +
+              '## 📝 Mudanças\\n\\n' +
+              changelog;
+            console.log(JSON.stringify({ body }));
+          ")
+
+          curl -X PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID" \
+            -d "$RELEASE_BODY_JSON"
+
       - name: Create GitHub Release Summary
         run: |
           echo "## :rocket: Nova versão publicada com sucesso!" >> $GITHUB_STEP_SUMMARY
           echo "* **Pacote:** ${{ steps.package.outputs.name }}" >> $GITHUB_STEP_SUMMARY
           echo "* **Versão:** ${{ steps.package.outputs.version }}" >> $GITHUB_STEP_SUMMARY
-          echo "* **Publicado em:** npm e GitHub Packages" >> $GITHUB_STEP_SUMMARY
+          echo "* **Publicado em:** npm" >> $GITHUB_STEP_SUMMARY
           echo "* **Data:** $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## 📝 Mudanças" >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.changelog.outputs.changelog }}" >> $GITHUB_STEP_SUMMARY
