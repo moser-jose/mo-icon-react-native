@@ -24,7 +24,7 @@ const config: Config = {
   transformIgnorePatterns: [
     'node_modules/(?!(react-native|@react-native|@testing-library/react-native)/)',
   ],
-  setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/__tests__/setupTests.ts'],
 };
 
 export default config;
