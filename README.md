@@ -108,7 +108,7 @@ export default function Example() {
 
 ### `Icon` component props
 
-- `name` (string): icon name (see the generated list in [icon-names.json](/src/icon-names.json)).
+- `name` (string): icon name (see the generated list in [icon-names.json](/icon-names.json)).
 - `type` (optional): icon variant; default: `"outline"`.
 - `size` (optional): size in px; default: `24`.
 - `color` (optional): color (stroke/fill) in HEX; default: `#1C274C`.
@@ -125,13 +125,15 @@ When importing individual components (e.g., `BoldHome`, `OutlineBell`), they acc
 
 1. Add/update your `.svg` files in `src/icons/<variant>/<folder>/...`.
 
-> Note: Before adding new SVGs, make sure to check whether the name already exists in the list provided in [icon-names.json](/src/icon-names.json). If the name already exists, you **must rename** the SVG before including it.
+> Note: Before adding new SVGs, make sure to check whether the name already exists in the list provided in [icon-names.json](/icon-names.json). If the name already exists, you **must rename** the SVG before including it.
 > You need to add the SVGs according to the variant, e.g., **bold**, **bold-duotone**, **outline**, **outline-duotone**, and **broken**.
 
-2. Run the generation script:
+1. Run the generation script:
 
 ```bash
 npm run generate:icons
+# or
+yarn run generate:icons
 # or
 pnpm run generate:icons
 ```
@@ -141,7 +143,9 @@ pnpm run generate:icons
 ```bash
 npm run test
 # or
-pnpm test
+yarn run test
+# or
+pnpm run test
 
 npm run test:ci #coverage
 ```
