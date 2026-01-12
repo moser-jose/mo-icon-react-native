@@ -6,11 +6,7 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const OutlineDuotoneRoundTransferVertical: React.FC<IconProps> = ({
-  size = 24,
-  color = '#1C274C',
-  ...props
-}) => {
+const OutlineDuotoneRoundTransferVertical: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="${color}" stroke-width="1.5" opacity=".5"/><path stroke="${color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 7v10l-3-3.437M14 17V7l3 3.438"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };

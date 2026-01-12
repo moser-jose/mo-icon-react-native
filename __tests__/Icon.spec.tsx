@@ -1,9 +1,9 @@
 // @ts-ignore
 import React from 'react';
 
-import { Icon } from '../../index';
+import { Icon } from '../src/index';
 
-jest.mock('../registry', () => {
+jest.mock('../src/registry', () => {
   // Mock icon components
   const MockIconComponent = () => null;
 

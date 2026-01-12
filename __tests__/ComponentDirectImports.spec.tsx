@@ -1,5 +1,5 @@
-// @ts-ignore
 import { render } from '@testing-library/react-native';
+import React from 'react';
 
 jest.mock('react-native-svg', () => ({
   SvgXml: (props: any) => {
@@ -11,7 +11,7 @@ jest.mock('react-native-svg', () => ({
 describe('Direct Component Imports', () => {
   it('should be able to import BoldHome directly from component file', () => {
     try {
-      const BoldHomeModule = require('../components/bold/home');
+      const BoldHomeModule = require('../src/components/bold/home');
       expect(BoldHomeModule).toBeDefined();
 
       // Check that both default and named export exist
@@ -30,7 +30,7 @@ describe('Direct Component Imports', () => {
 
   it('should render BoldHome when imported directly', () => {
     try {
-      const BoldHomeModule = require('../components/bold/home');
+      const BoldHomeModule = require('../src/components/bold/home');
       const Component = BoldHomeModule.BoldHome || BoldHomeModule.default;
 
       if (Component) {
@@ -46,7 +46,7 @@ describe('Direct Component Imports', () => {
 
   it('should export named export from component file', () => {
     try {
-      const BoldHomeModule = require('../components/bold/home');
+      const BoldHomeModule = require('../src/components/bold/home');
       // After script runs, BoldHome should be exported as named export
       if (BoldHomeModule.BoldHome) {
         expect(BoldHomeModule.BoldHome).toBeDefined();
@@ -59,7 +59,7 @@ describe('Direct Component Imports', () => {
 
   it('should maintain default export for backward compatibility', () => {
     try {
-      const BoldHomeModule = require('../components/bold/home');
+      const BoldHomeModule = require('../src/components/bold/home');
       // Default export should still exist for backward compatibility
       if (BoldHomeModule.default) {
         expect(BoldHomeModule.default).toBeDefined();

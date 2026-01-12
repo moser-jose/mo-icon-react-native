@@ -4,10 +4,17 @@ const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   testMatch: ['**/__tests__/**/*.(test|spec).ts?(x)', '**/?(*.)+(test|spec).ts?(x)'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'mjs', 'mts'],
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: 'tsconfig.json' }],
-    '^.+\\.(js|jsx)$': [
+    '^.+\\.(ts|tsx|mts)$': [
+      'ts-jest',
+      {
+        tsconfig: {
+          jsx: 'react',
+        },
+      },
+    ],
+    '^.+\\.(js|jsx|mjs)$': [
       'babel-jest',
       {
         presets: [
@@ -24,7 +31,7 @@ const config: Config = {
   transformIgnorePatterns: [
     'node_modules/(?!(react-native|@react-native|@testing-library/react-native)/)',
   ],
-  setupFilesAfterEnv: ['<rootDir>/src/__tests__/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/__tests__/setupTests.ts'],
 };
 
 export default config;

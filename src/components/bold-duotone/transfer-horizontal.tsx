@@ -6,11 +6,7 @@ export type IconProps = Omit<React.ComponentProps<typeof SvgXml>, 'width' | 'hei
   color?: string;
 };
 
-const BoldDuotoneTransferHorizontal: React.FC<IconProps> = ({
-  size = 24,
-  color = '#1C274C',
-  ...props
-}) => {
+const BoldDuotoneTransferHorizontal: React.FC<IconProps> = ({ size = 24, color = '#1C274C', ...props }) => {
   const xml = `<svg fill="none" viewBox="0 0 24 24"><path fill="${color}" d="M10.25 4a.75.75 0 0 0-1.303-.507l-5.5 6A.75.75 0 0 0 4 10.75h16a.75.75 0 0 0 0-1.5h-9.75z"/><path fill="${color}" d="M13.75 20v-5.25H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .553 1.257l-5.5 6A.75.75 0 0 1 13.75 20" opacity=".5"/></svg>`;
   return <SvgXml xml={xml} width={size} height={size} {...props} />;
 };

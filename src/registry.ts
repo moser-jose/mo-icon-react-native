@@ -1,5 +1,5 @@
 /* Author: @moser-jose */
-/* Date: 2026-01-09 */
+/* Date: 2026-01-12 */
 /*
   - Builds src/icons/registry.ts mapping: { [variant]: { [nameKey]: Component } }
   - Name key is the file path relative to the variant dir without extension (e.g. "bell-bing")

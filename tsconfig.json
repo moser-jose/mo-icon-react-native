@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "module": "es2020",
-    "jsx": "react-jsx",
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-native",
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
@@ -11,11 +11,13 @@
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "allowJs": true,
-    "outDir": "build",
+    "outDir": "dist",
     "baseUrl": ".",
+    "rootDir": "./src",
+    "noEmit": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "dist"]
 }
