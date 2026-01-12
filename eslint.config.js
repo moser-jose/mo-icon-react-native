@@ -1,4 +1,11 @@
-module.exports = [
+import typescriptPlugin from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import importPlugin from 'eslint-plugin-import';
+import prettierPlugin from 'eslint-plugin-prettier';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+
+export default [
   {
     ignores: [
       'node_modules/**',
@@ -14,8 +21,8 @@ module.exports = [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: require('@typescript-eslint/parser'),
-      ecmaVersion: 2021,
+      parser: typescriptParser,
+      ecmaVersion: 2023,
       sourceType: 'module',
       parserOptions: {
         ecmaFeatures: { jsx: true },
@@ -29,11 +36,11 @@ module.exports = [
       },
     },
     plugins: {
-      '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
-      react: require('eslint-plugin-react'),
-      'react-hooks': require('eslint-plugin-react-hooks'),
-      import: require('eslint-plugin-import'),
-      prettier: require('eslint-plugin-prettier'),
+      '@typescript-eslint': typescriptPlugin,
+      react: reactPlugin,
+      'react-hooks': reactHooksPlugin,
+      import: importPlugin,
+      prettier: prettierPlugin,
     },
     rules: {
       'react/react-in-jsx-scope': 'off',
