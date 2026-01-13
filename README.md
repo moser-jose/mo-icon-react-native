@@ -49,7 +49,59 @@ export default function Example() {
 
 You can import and use individual icon components directly for better tree-shaking and type safety. There are three ways to import individual components:
 
-#### Option 1: Direct import from component files (Recommended)
+#### Option 1: Import from variant exports (Recommended for variant-specific imports)
+
+Import icons from variant-specific exports. Icons are exported with PascalCase names (without the variant prefix):
+
+```tsx
+import React from 'react';
+import { View } from 'react-native';
+import { Home, Bell } from '@mosmmy/mo-icon-react-native/bold';
+import { Home as OutlineHome, Bell as OutlineBell } from '@mosmmy/mo-icon-react-native/outline';
+
+export default function Example() {
+  return (
+    <View>
+      <Home size={24} color="#333" />
+      <Bell size={32} color="#E11D48" />
+      <OutlineHome size={24} color="#333" />
+      <OutlineBell size={32} color="#E11D48" />
+    </View>
+  );
+}
+```
+
+Available variant exports:
+
+- `@mosmmy/mo-icon-react-native/bold`
+- `@mosmmy/mo-icon-react-native/outline`
+- `@mosmmy/mo-icon-react-native/broken`
+- `@mosmmy/mo-icon-react-native/boldDuotone`
+- `@mosmmy/mo-icon-react-native/outlineDuotone`
+
+#### Option 2: Import from components-exports
+
+If you need multiple components from different variants, you can import them from the components-exports file:
+
+```tsx
+import React from 'react';
+import { View } from 'react-native';
+import { BoldHome, OutlineHome, BoldBell } from '@mosmmy/mo-icon-react-native/components-exports';
+
+export default function Example() {
+  return (
+    <View>
+      <BoldHome size={24} color="#333" />
+      <OutlineHome size={32} color="#E11D48" />
+      <BoldBell size={48} color="#10B981" />
+    </View>
+  );
+}
+```
+
+#### Option 3: Direct import from component files (Development only)
+
+> **Note:** This method only works when developing the library itself or when the source files are available. For published packages, use Option 1 or Option 2.
 
 Import directly from the component file path for optimal tree-shaking:
 
@@ -71,26 +123,6 @@ export default function Example() {
 }
 ```
 
-#### Option 2: Import from components-exports
-
-If you need multiple components, you can import them from the components-exports file:
-
-```tsx
-import React from 'react';
-import { View } from 'react-native';
-import { BoldHome, OutlineHome, BoldBell } from '@mosmmy/mo-icon-react-native/components-exports';
-
-export default function Example() {
-  return (
-    <View>
-      <BoldHome size={24} color="#333" />
-      <OutlineHome size={32} color="#E11D48" />
-      <BoldBell size={48} color="#10B981" />
-    </View>
-  );
-}
-```
-
 **Benefits of individual imports:**
 
 - Better tree-shaking (only imported icons are bundled)
@@ -100,11 +132,11 @@ export default function Example() {
 
 ### Available variants
 
-- bold --> (e.g., <img src="src/icons/bold/notifications/bell.svg" alt="bell bold icon" width="18">)
-- bold-duotone --> (e.g., <img src="src/icons/bold-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
-- broken --> (e.g., <img src="src/icons/broken/notifications/bell.svg" alt="bell bold icon" width="18">)
-- outline --> (e.g., <img src="src/icons/outline/notifications/bell.svg" alt="bell bold icon" width="18">)
-- outline-duotone --> (e.g., <img src="src/icons/outline-duotone/notifications/bell.svg" alt="bell bold icon" width="18">)
+- **bold** - Bold filled icons
+- **bold-duotone** - Bold icons with duotone effect
+- **broken** - Broken/outline style icons
+- **outline** - Outline style icons (default)
+- **outline-duotone** - Outline icons with duotone effect
 
 ### `Icon` component props
 
@@ -157,7 +189,8 @@ The script:
 - Optimizes SVGs via SVGO;
 - Generates TSX components that use `SvgXml` and accept `size` and `color`;
 - Updates `registry.ts`, `types.d.ts` and `icon-names.json` based on what was found in `icons/`;
-- Generates `components-exports.ts` and `components-exports.js` with named exports for all individual icon components.
+- Generates `components-exports.ts` with named exports for all individual icon components;
+- Generates variant export files (`variants/Bold.ts`, `variants/Outline.ts`, etc.) for variant-specific imports.
 
 ## Best practices and notes
 
@@ -166,7 +199,7 @@ The script:
 
 ## License
 
-This project is governed by the [MIT](/LICENSE.md). Just remember to be a nice person and send back any modifications, corrections or improvements. ✌️
+This project is governed by the [MIT License](/LICENSE). Just remember to be a nice person and send back any modifications, corrections or improvements. ✌️
 
 ## Icon credits
 
